@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2016/04/21 15:00:54 by qloubier         ###   ########.fr       */
+/*   Updated: 2016/06/26 21:47:44 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,17 +124,43 @@ typedef struct		s_float_vector_4d
 	float			w;
 }					t_v4f;
 
+typedef struct		s_double_vector_2d
+{
+	double			x;
+	double			y;
+}					t_v2d;
+
+typedef struct		s_double_vector_3d
+{
+	double			x;
+	double			y;
+	double			z;
+}					t_v3d;
+
+typedef struct		s_double_vector_4d
+{
+	double			x;
+	double			y;
+	double			z;
+	double			w;
+}					t_v4d;
+
 t_v2i				nv2i(int i);
 t_v3i				nv3i(int i);
 t_v4i				nv4i(int i);
 t_v2f				nv2f(float num);
 t_v3f				nv3f(float num);
 t_v4f				nv4f(float num);
+t_v2d				nv2d(double num);
+t_v3d				nv3d(double num);
+t_v4d				nv4d(double num);
 
 t_v2i				v3to2i(t_v3i vec);
 t_v3i				v2to3i(t_v2i vec);
 t_v2f				v3to2f(t_v3f vec);
 t_v3f				v2to3f(t_v2f vec);
+t_v2d				v3to2d(t_v3d vec);
+t_v3d				v2to3d(t_v2d vec);
 
 void				swapv2i(t_v2i *a, t_v2i *b);
 void				swapv3i(t_v3i *a, t_v3i *b);
@@ -190,7 +216,9 @@ t_v3f				*pv3fdivv3i(t_v3f *a, const t_v3i *b);
 t_v3f				v3fdivv3f(t_v3f a, t_v3f b);
 t_v3f				*pv3fdivv3f(t_v3f *a, const t_v3f *b);
 
-t_v2f				normalize2d(t_v2f v);
-t_v3f				normalize3d(t_v3f v);
+t_v2f				normalize2f(t_v2f v);
+t_v3f				normalize3f(t_v3f v);
+t_v2d				normalize2d(t_v2d v);
+t_v3d				normalize3d(t_v3d v);
 
 #endif

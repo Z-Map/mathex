@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2016/05/31 18:57:10 by qloubier         ###   ########.fr        #
+#    Updated: 2016/09/18 17:19:37 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ ifeq ($(OPSYS),Linux)
 endif
 OBJ=basic.o\
 	basicf.o\
+	basicu.o\
 	binary/bitaprox.o\
 	fixed/fromfixed.o\
 	fixed/tofixed.o\
@@ -45,10 +46,12 @@ OBJ=basic.o\
 	vector/swapf.o\
 	vector/swapi.o\
 	vector/tov4f.o\
+	vector/tov4d.o\
 	vector/tov4i.o\
 	vector/vec2d/add2i.o\
 	vector/vec2d/sub2i.o\
 	vector/vec2d/tov2f.o\
+	vector/vec2d/tov2d.o\
 	vector/vec2d/tov2i.o\
 	vector/vec3d/add3f.o\
 	vector/vec3d/add3i.o\
@@ -59,6 +62,7 @@ OBJ=basic.o\
 	vector/vec3d/sub3f.o\
 	vector/vec3d/sub3i.o\
 	vector/vec3d/tov3f.o\
+	vector/vec3d/tov3d.o\
 	vector/vec3d/tov3i.o
 
 all: $(NAME)

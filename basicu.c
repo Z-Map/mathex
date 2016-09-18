@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   basic.h                                            :+:      :+:    :+:   */
+/*   basicu.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/01 17:17:56 by qloubier          #+#    #+#             */
-/*   Updated: 2016/05/27 00:05:29 by qloubier         ###   ########.fr       */
+/*   Created: 2016/05/27 00:06:38 by qloubier          #+#    #+#             */
+/*   Updated: 2016/05/27 00:07:33 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BASIC_H
-# define BASIC_H
+#include "basic.h"
 
-# include "utils.h"
+t_ui		mxmaxu(t_ui a, t_ui b)
+{
+	if (a > b)
+		return (a);
+	return (b);
+}
 
-int			mxabs(int a);
-int			mxabsf(float a);
-int			mxmax(int a, int b);
-int			mxmin(int a, int b);
-t_ui		mxmaxu(t_ui a, t_ui b);
-t_ui		mxminu(t_ui a, t_ui b);
-int			mxmaxf(float a, float b);
-int			mxminf(float a, float b);
-void		swap(unsigned int *a, unsigned int *b);
-void		swapf(float *a, float *b);
-
-#endif
+t_ui		mxminu(t_ui a, t_ui b)
+{
+	if (a < b)
+		return (a);
+	return (b);
+}

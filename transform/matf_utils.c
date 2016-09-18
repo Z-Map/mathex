@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 09:39:25 by qloubier          #+#    #+#             */
-/*   Updated: 2016/06/01 21:31:53 by qloubier         ###   ########.fr       */
+/*   Updated: 2016/05/01 04:01:30 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ t_mattf				mattf_identity(void)
 
 t_mattf				mattf_perspective(float fov, float ratio, t_v2f clip)
 {
-	fov = tan(((fov * 0.5) / 180.0f) * M_PI_2);
+	fov = tan(((fov / 360.0f) * M_PI) / 2.0f);
 	return ((t_mattf){
 		(t_v3f){ 1.0f / fov, 0.0f, 0.0f},
 		(t_v3f){ 0.0f, ratio / fov, 0.0f},
-		(t_v3f){ 0.0f, 0.0f, (-clip.x - clip.y) / (clip.x - clip.y)},
-		(t_v3f){ 0.0f, 0.0f, (2 * clip.y * clip.x) / (clip.y - clip.x)},
+		(t_v3f){ 0.0f, 0.0f, ((clip.y + clip.x) / (clip.x - clip.y))},
+		(t_v3f){ 0.0f, 0.0f, ((2 * clip.y * clip.x) / (clip.x - clip.y))},
 		(t_v4f){ 0.0f, 0.0f, -1.0f, 0.0f}});
 }
 
