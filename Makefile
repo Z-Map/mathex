@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2016/11/25 05:01:51 by qloubier         ###   ########.fr        #
+#    Updated: 2016/11/25 14:45:41 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ OBJ=utils/utils.o\
 	fixed/tofixed.o\
 	fixed/toifixed.o\
 	transform/matf_multiply.o\
+	transform/matf_project.o\
 	transform/matf_invert.o\
 	transform/matf_rot.o\
 	transform/matf_rotx.o\
@@ -54,6 +55,7 @@ OBJ=utils/utils.o\
 	transform/matd_utils.o\
 	vector/normalize.o\
 	vector/swapf.o\
+	vector/swapd.o\
 	vector/swapi.o\
 	vector/tov4f.o\
 	vector/tov4d.o\
@@ -64,12 +66,16 @@ OBJ=utils/utils.o\
 	vector/vec2d/tov2d.o\
 	vector/vec2d/tov2i.o\
 	vector/vec3d/add3f.o\
+	vector/vec3d/add3d.o\
 	vector/vec3d/add3i.o\
 	vector/vec3d/div3f.o\
+	vector/vec3d/div3d.o\
 	vector/vec3d/div3i.o\
 	vector/vec3d/mul3f.o\
+	vector/vec3d/mul3d.o\
 	vector/vec3d/mul3i.o\
 	vector/vec3d/sub3f.o\
+	vector/vec3d/sub3d.o\
 	vector/vec3d/sub3i.o\
 	vector/vec3d/tov3f.o\
 	vector/vec3d/tov3d.o\

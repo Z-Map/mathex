@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 09:39:25 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 04:49:27 by qloubier         ###   ########.fr       */
+/*   Updated: 2016/11/25 16:36:27 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ t_mattf				mattf_identity(void)
 
 t_mattf				mattf_perspective(float fov, float ratio, t_v2f clip)
 {
-	fov = tanf(((fov / 360.0f) * (float)M_PI) / 2.0f);
+	fov = 1.0f / tanf(fov / 2.0f);
 	return ((t_mattf){
-		(t_v3f){ 1.0f / fov, 0.0f, 0.0f},
-		(t_v3f){ 0.0f, ratio / fov, 0.0f},
-		(t_v3f){ 0.0f, 0.0f, ((clip.y + clip.x) / (clip.x - clip.y))},
-		(t_v3f){ 0.0f, 0.0f, ((2 * clip.y * clip.x) / (clip.x - clip.y))},
+		(t_v3f){ fov / ratio, 0.0f, 0.0f},
+		(t_v3f){ 0.0f, fov, 0.0f},
+		(t_v3f){ 0.0f, 0.0f, ((clip.x + clip.y) / (clip.x - clip.y))},
+		(t_v3f){ 0.0f, 0.0f, ((2 * clip.x * clip.y) / (clip.x - clip.y))},
 		(t_v4f){ 0.0f, 0.0f, -1.0f, 0.0f}});
 }
 
@@ -55,4 +55,13 @@ t_mattf				mattf_iso(void)
 		(t_v3f){ 0.0f, -0.816496580927728f, 0.0f},
 		(t_v3f){ 0.0f, 0.0f, 0.0f},
 		(t_v4f){ 0.0f, 0.0f, 0.0f, 1.0f}});
+}
+
+t_mat4f				mattf_togl(const t_mattf m)
+{
+	return ((t_mat4f){
+		(t_v4f){m.x.x, m.y.x, m.z.x, m.offset.x},
+		(t_v4f){m.x.y, m.y.y, m.z.y, m.offset.y},
+		(t_v4f){m.x.z, m.y.z, m.z.z, m.offset.z},
+		(t_v4f){m.w.x, m.w.y, m.w.z, m.w.w}});
 }

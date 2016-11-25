@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 04:57:25 by qloubier         ###   ########.fr       */
+/*   Updated: 2016/11/25 14:37:11 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,27 @@ typedef	struct		s_float_matrix_4d
 	t_v4f			w;
 }					t_mat4f;
 
+typedef	struct		s_double_matrix_2d
+{
+	t_v2d			x;
+	t_v2d			y;
+}					t_mat2d;
+
+typedef	struct		s_double_matrix_3d
+{
+	t_v3d			x;
+	t_v3d			y;
+	t_v3d			z;
+}					t_mat3d;
+
+typedef	struct		s_double_matrix_4d
+{
+	t_v4d			x;
+	t_v4d			y;
+	t_v4d			z;
+	t_v4d			w;
+}					t_mat4d;
+
 typedef	struct		s_float_matrix_transform
 {
 	t_v3f			x;
@@ -131,6 +152,7 @@ t_mattf				ntransformf(t_v3f mov, t_v3f rot, t_v3f sca);
 
 t_v3f				*pmattf_apply(t_v3f *v, const t_mattf *mat);
 t_v3f				mattf_apply(t_v3f v, t_mattf mat);
+t_v3f				*pmattf_project(t_v3f *v, const t_mattf *mat);
 
 t_mattf				*pmattf_multiply(t_mattf *dest, const t_mattf *mat);
 t_mattf				mattf_multiply(t_mattf mat1, t_mattf mat2);
@@ -141,6 +163,8 @@ t_mattf				mattf_identity(void);
 t_mattf				mattf_perspective(float fov, float ratio, t_v2f clip);
 t_mattf				mattf_ortho(int w, int h, float zoom, float limit);
 t_mattf				mattf_iso(void);
+
+t_mat4f				mattf_togl(const t_mattf m);
 
 /*
 **	Double precision matrix function
@@ -187,5 +211,7 @@ t_mattd				mattd_identity(void);
 t_mattd				mattd_perspective(double fov, double ratio, t_v2d clip);
 t_mattd				mattd_ortho(int w, int h, double zoom, double limit);
 t_mattd				mattd_iso(void);
+
+t_mat4d				mattd_togl(const t_mattd m);
 
 #endif

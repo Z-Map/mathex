@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 09:39:25 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 05:16:29 by qloubier         ###   ########.fr       */
+/*   Updated: 2016/11/25 06:16:52 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,13 @@ t_mattd				mattd_iso(void)
 		(t_v3d){ 0.0, -0.816496580927728, 0.0},
 		(t_v3d){ 0.0, 0.0, 0.0},
 		(t_v4d){ 0.0, 0.0, 0.0, 1.0}});
+}
+
+t_mat4d				mattd_togl(const t_mattd m)
+{
+	return ((t_mat4d){
+		(t_v4d){m.x.x, m.y.x, m.z.x, m.offset.x},
+		(t_v4d){m.x.y, m.y.y, m.z.y, m.offset.y},
+		(t_v4d){m.x.z, m.y.z, m.z.z, m.offset.z},
+		(t_v4d){m.w.x, m.w.y, m.w.z, m.w.w}});
 }
