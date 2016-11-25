@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sub2i.c                                            :+:      :+:    :+:   */
+/*   swapd.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/16 01:12:31 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 05:16:59 by qloubier         ###   ########.fr       */
+/*   Created: 2016/03/21 22:18:09 by qloubier          #+#    #+#             */
+/*   Updated: 2016/11/25 05:15:00 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.h"
 
-t_v2i					v2isubv2i(t_v2i a, t_v2i b)
+void			swapv2d(t_v2d *a, t_v2d *b)
 {
-	return((t_v2i){ a.x - b.x, a.y - b.y });
+	t_v2d	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
-t_v2i					*pv2isubv2i(t_v2i *a, const t_v2i *b)
+void			swapv3d(t_v3d *a, t_v3d *b)
 {
-	a->x -= b->x;
-	a->y -= b->y;
-	return(a);
+	t_v3d	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
-t_v2i					v2isubv2f(t_v2i a, t_v2f b)
+void			swapv4d(t_v4d *a, t_v4d *b)
 {
-	return((t_v2i){ a.x - (int)b.x, a.y - (int)b.y });
-}
+	t_v4d	tmp;
 
-t_v2i					*pv2isubv2f(t_v2i *a, const t_v2f *b)
-{
-	a->x -= (int)b->x;
-	a->y -= (int)b->y;
-	return(a);
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2016/05/31 18:33:03 by qloubier         ###   ########.fr       */
+/*   Updated: 2016/11/25 04:57:25 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,19 @@ typedef	struct		s_float_matrix_transform
 	t_v4f			w;
 }					t_mattf;
 
+typedef	struct		s_double_matrix_transform
+{
+	t_v3d			x;
+	t_v3d			y;
+	t_v3d			z;
+	t_v3d			offset;
+	t_v4d			w;
+}					t_mattd;
+
+/*
+**	Single precision matrix function
+*/
+
 t_mattf				*pmattf_trans(t_mattf *mat, t_v3f mov);
 t_mattf				mattf_trans(t_mattf mat, t_v3f mov);
 t_mattf				nmattf_trans(t_v3f mov);
@@ -112,9 +125,9 @@ t_mattf				*pmattf_rot(t_mattf *mat, t_v3f vrad);
 t_mattf				mattf_rot(t_mattf mat, t_v3f vrad);
 t_mattf				nmattf_rot(t_v3f vrad);
 
-t_mattf				*ptransform(t_mattf *mat, t_v3f m, t_v3f r, t_v3f s);
-t_mattf				transform(t_mattf mat, t_v3f m, t_v3f r, t_v3f s);
-t_mattf				ntransform(t_v3f mov, t_v3f rot, t_v3f sca);
+t_mattf				*ptransformf(t_mattf *mat, t_v3f m, t_v3f r, t_v3f s);
+t_mattf				transformf(t_mattf mat, t_v3f m, t_v3f r, t_v3f s);
+t_mattf				ntransformf(t_v3f mov, t_v3f rot, t_v3f sca);
 
 t_v3f				*pmattf_apply(t_v3f *v, const t_mattf *mat);
 t_v3f				mattf_apply(t_v3f v, t_mattf mat);
@@ -124,9 +137,55 @@ t_mattf				mattf_multiply(t_mattf mat1, t_mattf mat2);
 t_mattf				*pmattf_invert(t_mattf *mat);
 t_mattf				mattf_invert(const t_mattf *mat);
 
-t_mattf				mattf_identity();
+t_mattf				mattf_identity(void);
 t_mattf				mattf_perspective(float fov, float ratio, t_v2f clip);
 t_mattf				mattf_ortho(int w, int h, float zoom, float limit);
-t_mattf				mattf_iso();
+t_mattf				mattf_iso(void);
+
+/*
+**	Double precision matrix function
+*/
+
+t_mattd				*pmattd_trans(t_mattd *mat, t_v3d mov);
+t_mattd				mattd_trans(t_mattd mat, t_v3d mov);
+t_mattd				nmattd_trans(t_v3d mov);
+
+t_mattd				*pmattd_scale(t_mattd *mat, double size);
+t_mattd				mattd_scale(t_mattd mat, double size);
+t_mattd				nmattd_scale(double size);
+t_mattd				*pmattd_scalv(t_mattd *mat, t_v3d sizev);
+t_mattd				mattd_scalv(t_mattd mat, t_v3d sizev);
+t_mattd				nmattd_scalv(t_v3d sizev);
+
+t_mattd				*pmattd_rotx(t_mattd *mat, double rad);
+t_mattd				mattd_rotx(t_mattd mat, double rad);
+t_mattd				nmattd_rotx(double rad);
+t_mattd				*pmattd_roty(t_mattd *mat, double rad);
+t_mattd				mattd_roty(t_mattd mat, double rad);
+t_mattd				nmattd_roty(double rad);
+t_mattd				*pmattd_rotz(t_mattd *mat, double rad);
+t_mattd				mattd_rotz(t_mattd mat, double rad);
+t_mattd				nmattd_rotz(double rad);
+
+t_mattd				*pmattd_rot(t_mattd *mat, t_v3d vrad);
+t_mattd				mattd_rot(t_mattd mat, t_v3d vrad);
+t_mattd				nmattd_rot(t_v3d vrad);
+
+t_mattd				*ptransformd(t_mattd *mat, t_v3d m, t_v3d r, t_v3d s);
+t_mattd				transformd(t_mattd mat, t_v3d m, t_v3d r, t_v3d s);
+t_mattd				ntransformd(t_v3d mov, t_v3d rot, t_v3d sca);
+
+t_v3d				*pmattd_apply(t_v3d *v, const t_mattd *mat);
+t_v3d				mattd_apply(t_v3d v, t_mattd mat);
+
+t_mattd				*pmattd_multiply(t_mattd *dest, const t_mattd *mat);
+t_mattd				mattd_multiply(t_mattd mat1, t_mattd mat2);
+t_mattd				*pmattd_invert(t_mattd *mat);
+t_mattd				mattd_invert(const t_mattd *mat);
+
+t_mattd				mattd_identity(void);
+t_mattd				mattd_perspective(double fov, double ratio, t_v2d clip);
+t_mattd				mattd_ortho(int w, int h, double zoom, double limit);
+t_mattd				mattd_iso(void);
 
 #endif

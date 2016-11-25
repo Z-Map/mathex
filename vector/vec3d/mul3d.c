@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sub2i.c                                            :+:      :+:    :+:   */
+/*   mul3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/16 01:12:31 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 05:16:59 by qloubier         ###   ########.fr       */
+/*   Created: 2016/03/16 01:06:47 by qloubier          #+#    #+#             */
+/*   Updated: 2016/11/25 05:10:03 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.h"
 
-t_v2i					v2isubv2i(t_v2i a, t_v2i b)
+t_v3d					v3dmulv3i(t_v3d a, t_v3i b)
 {
-	return((t_v2i){ a.x - b.x, a.y - b.y });
+	return((t_v3d){ a.x * (double)(b.x),
+		a.y * (double)(b.y),
+		a.z * (double)(b.z)});
 }
 
-t_v2i					*pv2isubv2i(t_v2i *a, const t_v2i *b)
+t_v3d					*pv3dmulv3i(t_v3d *a, const t_v3i *b)
 {
-	a->x -= b->x;
-	a->y -= b->y;
+	a->x *= (double)(b->x);
+	a->y *= (double)(b->y);
+	a->z *= (double)(b->z);
 	return(a);
 }
 
-t_v2i					v2isubv2f(t_v2i a, t_v2f b)
+t_v3d					v3dmulv3d(t_v3d a, t_v3d b)
 {
-	return((t_v2i){ a.x - (int)b.x, a.y - (int)b.y });
+	return((t_v3d){ a.x * (double)(b.x),
+		a.y * (double)(b.y),
+		a.z * (double)(b.z)});
 }
 
-t_v2i					*pv2isubv2f(t_v2i *a, const t_v2f *b)
+t_v3d					*pv3dmulv3d(t_v3d *a, const t_v3d *b)
 {
-	a->x -= (int)b->x;
-	a->y -= (int)b->y;
+	a->x *= b->x;
+	a->y *= b->y;
+	a->z *= b->z;
 	return(a);
 }

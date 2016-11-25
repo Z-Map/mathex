@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sub2i.c                                            :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/16 01:12:31 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 05:16:59 by qloubier         ###   ########.fr       */
+/*   Created: 2016/04/01 17:43:23 by qloubier          #+#    #+#             */
+/*   Updated: 2016/11/25 04:04:51 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vector.h"
+#include "utils.h"
 
-t_v2i					v2isubv2i(t_v2i a, t_v2i b)
+int			mxabs(int a)
 {
-	return((t_v2i){ a.x - b.x, a.y - b.y });
+	if (a < 0)
+		return (-a);
+	return (a);
 }
 
-t_v2i					*pv2isubv2i(t_v2i *a, const t_v2i *b)
+int			mxmax(int a, int b)
 {
-	a->x -= b->x;
-	a->y -= b->y;
-	return(a);
+	if (a > b)
+		return (a);
+	return (b);
 }
 
-t_v2i					v2isubv2f(t_v2i a, t_v2f b)
+int			mxmin(int a, int b)
 {
-	return((t_v2i){ a.x - (int)b.x, a.y - (int)b.y });
+	if (a < b)
+		return (a);
+	return (b);
 }
 
-t_v2i					*pv2isubv2f(t_v2i *a, const t_v2f *b)
+void		swap(unsigned int *a, unsigned int *b)
 {
-	a->x -= (int)b->x;
-	a->y -= (int)b->y;
-	return(a);
+	register unsigned int	tmp;
+
+	tmp = *b;
+	*b = *a;
+	*a = tmp;
 }

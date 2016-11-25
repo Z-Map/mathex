@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sub2i.c                                            :+:      :+:    :+:   */
+/*   matf_trans.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/16 01:12:31 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 05:16:59 by qloubier         ###   ########.fr       */
+/*   Created: 2016/03/03 17:47:59 by qloubier          #+#    #+#             */
+/*   Updated: 2016/04/21 14:58:27 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vector.h"
+#include "matrix.h"
 
-t_v2i					v2isubv2i(t_v2i a, t_v2i b)
+t_mattd				*pmattd_trans(t_mattd *mat, t_v3d mov)
 {
-	return((t_v2i){ a.x - b.x, a.y - b.y });
+	pv3daddv3d(&(mat->offset), &mov);
+	return (mat);
 }
 
-t_v2i					*pv2isubv2i(t_v2i *a, const t_v2i *b)
+t_mattd				mattd_trans(t_mattd mat, t_v3d mov)
 {
-	a->x -= b->x;
-	a->y -= b->y;
-	return(a);
+	pv3daddv3d(&(mat.offset), &mov);
+	return (mat);
 }
 
-t_v2i					v2isubv2f(t_v2i a, t_v2f b)
+t_mattd				nmattd_trans(t_v3d mov)
 {
-	return((t_v2i){ a.x - (int)b.x, a.y - (int)b.y });
-}
-
-t_v2i					*pv2isubv2f(t_v2i *a, const t_v2f *b)
-{
-	a->x -= (int)b->x;
-	a->y -= (int)b->y;
-	return(a);
+	return ((t_mattd){
+		(t_v3d){ 1.0, 0.0, 0.0},
+		(t_v3d){ 0.0, 1.0, 0.0},
+		(t_v3d){ 0.0, 0.0, 1.0},
+		mov,
+		(t_v4d){ 0.0, 0.0, 0.0, 1.0}});
 }

@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2016/06/26 21:47:44 by qloubier         ###   ########.fr       */
+/*   Updated: 2016/11/25 05:18:45 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,11 +156,17 @@ t_v3d				nv3d(double num);
 t_v4d				nv4d(double num);
 
 t_v2i				v3to2i(t_v3i vec);
+t_v2i				v4to2i(t_v4i vec);
 t_v3i				v2to3i(t_v2i vec);
+t_v3i				v4to3i(t_v4i vec);
 t_v2f				v3to2f(t_v3f vec);
+t_v2f				v4to2f(t_v4f vec);
 t_v3f				v2to3f(t_v2f vec);
+t_v3f				v4to3f(t_v4f vec);
 t_v2d				v3to2d(t_v3d vec);
+t_v2d				v4to2d(t_v4d vec);
 t_v3d				v2to3d(t_v2d vec);
+t_v3d				v4to3d(t_v4d vec);
 
 void				swapv2i(t_v2i *a, t_v2i *b);
 void				swapv3i(t_v3i *a, t_v3i *b);
@@ -169,6 +175,10 @@ void				swapv4i(t_v4i *a, t_v4i *b);
 void				swapv2f(t_v2f *a, t_v2f *b);
 void				swapv3f(t_v3f *a, t_v3f *b);
 void				swapv4f(t_v4f *a, t_v4f *b);
+
+void				swapv2d(t_v2d *a, t_v2d *b);
+void				swapv3d(t_v3d *a, t_v3d *b);
+void				swapv4d(t_v4d *a, t_v4d *b);
 
 t_v2i				v2iaddv2i(t_v2i a, t_v2i b);
 t_v2i				*pv2iaddv2i(t_v2i *a, const t_v2i *b);
@@ -188,6 +198,10 @@ t_v3f				v3faddv3i(t_v3f a, t_v3i b);
 t_v3f				*pv3faddv3i(t_v3f *a, const t_v3i *b);
 t_v3f				v3faddv3f(t_v3f a, t_v3f b);
 t_v3f				*pv3faddv3f(t_v3f *a, const t_v3f *b);
+t_v3d				v3daddv3i(t_v3d a, t_v3i b);
+t_v3d				*pv3daddv3i(t_v3d *a, const t_v3i *b);
+t_v3d				v3daddv3d(t_v3d a, t_v3d b);
+t_v3d				*pv3daddv3d(t_v3d *a, const t_v3d *b);
 
 t_v3i				v3isubv3i(t_v3i a, t_v3i b);
 t_v3i				*pv3isubv3i(t_v3i *a, const t_v3i *b);
@@ -197,6 +211,10 @@ t_v3f				v3fsubv3i(t_v3f a, t_v3i b);
 t_v3f				*pv3fsubv3i(t_v3f *a, const t_v3i *b);
 t_v3f				v3fsubv3f(t_v3f a, t_v3f b);
 t_v3f				*pv3fsubv3f(t_v3f *a, const t_v3f *b);
+t_v3d				v3dsubv3i(t_v3d a, t_v3i b);
+t_v3d				*pv3dsubv3i(t_v3d *a, const t_v3i *b);
+t_v3d				v3dsubv3d(t_v3d a, t_v3d b);
+t_v3d				*pv3dsubv3d(t_v3d *a, const t_v3d *b);
 
 t_v3i				v3imulv3i(t_v3i a, t_v3i b);
 t_v3i				*pv3imulv3i(t_v3i *a, const t_v3i *b);
@@ -206,6 +224,10 @@ t_v3f				v3fmulv3i(t_v3f a, t_v3i b);
 t_v3f				*pv3fmulv3i(t_v3f *a, const t_v3i *b);
 t_v3f				v3fmulv3f(t_v3f a, t_v3f b);
 t_v3f				*pv3fmulv3f(t_v3f *a, const t_v3f *b);
+t_v3d				v3dmulv3i(t_v3d a, t_v3i b);
+t_v3d				*pv3dmulv3i(t_v3d *a, const t_v3i *b);
+t_v3d				v3dmulv3d(t_v3d a, t_v3d b);
+t_v3d				*pv3dmulv3d(t_v3d *a, const t_v3d *b);
 
 t_v3i				v3idivv3i(t_v3i a, t_v3i b);
 t_v3i				*pv3idivv3i(t_v3i *a, const t_v3i *b);
@@ -215,6 +237,10 @@ t_v3f				v3fdivv3i(t_v3f a, t_v3i b);
 t_v3f				*pv3fdivv3i(t_v3f *a, const t_v3i *b);
 t_v3f				v3fdivv3f(t_v3f a, t_v3f b);
 t_v3f				*pv3fdivv3f(t_v3f *a, const t_v3f *b);
+t_v3d				v3ddivv3i(t_v3d a, t_v3i b);
+t_v3d				*pv3ddivv3i(t_v3d *a, const t_v3i *b);
+t_v3d				v3ddivv3d(t_v3d a, t_v3d b);
+t_v3d				*pv3ddivv3d(t_v3d *a, const t_v3d *b);
 
 t_v2f				normalize2f(t_v2f v);
 t_v3f				normalize3f(t_v3f v);

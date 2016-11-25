@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 14:27:24 by qloubier          #+#    #+#             */
-/*   Updated: 2016/04/21 14:56:49 by qloubier         ###   ########.fr       */
+/*   Updated: 2016/11/25 04:42:33 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ t_mattf				mattf_rot(t_mattf mat, t_v3f vrad)
 
 t_mattf				nmattf_rot(t_v3f vrad)
 {
-	const t_v3f		c = (t_v3f){cos(vrad.x), cos(vrad.y), cos(vrad.z)};
-	const t_v3f		s = (t_v3f){sin(vrad.x), sin(vrad.y), sin(vrad.z)};
+	const t_v3f		c = (t_v3f){cosf(vrad.x), cosf(vrad.y), cosf(vrad.z)};
+	const t_v3f		s = (t_v3f){sinf(vrad.x), sinf(vrad.y), sinf(vrad.z)};
 	const float		sxsz = s.x * s.z;
 	const float		sycz = s.y * c.z;
 

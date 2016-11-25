@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/09 04:03:29 by qloubier          #+#    #+#             */
-/*   Updated: 2016/04/21 14:54:55 by qloubier         ###   ########.fr       */
+/*   Updated: 2016/11/25 04:36:25 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ t_fix		ftofix(float num)
 		ret |= MSIGN;
 		num = -num;
 	}
-	ret |= ((int)num) << FIF_INTSHIFT;
+	ret |= (((unsigned int)num) << FIF_INTSHIFT) & ~MSIGN;
 	num = (float)(num - (int)num) * (float)(FIF_FRACPOW);
-	ret |= (int)num;
+	ret |= (unsigned int)num;
 	num -= (int)num;
 	if (num >= 0.5f)
 		ret += 1;

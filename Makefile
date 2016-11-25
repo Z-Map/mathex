@@ -6,13 +6,13 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2016/11/25 04:19:12 by qloubier         ###   ########.fr        #
+#    Updated: 2016/11/25 05:01:51 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 OPSYS=$(shell uname -s)
-CC=gcc
-CFLAGS=-Wall -Werror -Wextra
+CC=clang
+CFLAGS=-Wall -Werror -Wextra -Weverything
 ifdef DEBUG
 	CFLAGS+=-g
 endif
@@ -42,6 +42,16 @@ OBJ=utils/utils.o\
 	transform/matf_scalv.o\
 	transform/matf_trans.o\
 	transform/matf_utils.o\
+	transform/matd_multiply.o\
+	transform/matd_invert.o\
+	transform/matd_rot.o\
+	transform/matd_rotx.o\
+	transform/matd_roty.o\
+	transform/matd_rotz.o\
+	transform/matd_scale.o\
+	transform/matd_scalv.o\
+	transform/matd_trans.o\
+	transform/matd_utils.o\
 	vector/normalize.o\
 	vector/swapf.o\
 	vector/swapi.o\

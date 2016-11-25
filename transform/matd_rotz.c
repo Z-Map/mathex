@@ -1,44 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   matf_rotz.c                                        :+:      :+:    :+:   */
+/*   matd_rotz.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 14:20:59 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 04:42:56 by qloubier         ###   ########.fr       */
+/*   Updated: 2016/11/25 05:03:10 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "matrix.h"
 #include <math.h>
 
-t_mattf				*pmattf_rotz(t_mattf *mat, float rad)
+t_mattd				*pmattd_rotz(t_mattd *mat, double rad)
 {
-	t_mattf			rot;
+	t_mattd			rot;
 
-	rot = nmattf_rotz(rad);
-	return (pmattf_multiply(mat, &rot));
+	rot = nmattd_rotz(rad);
+	return (pmattd_multiply(mat, &rot));
 }
 
-t_mattf				mattf_rotz(t_mattf mat, float rad)
+t_mattd				mattd_rotz(t_mattd mat, double rad)
 {
-	t_mattf			rot;
+	t_mattd			rot;
 
-	rot = nmattf_rotz(rad);
-	pmattf_multiply(&mat, &rot);
+	rot = nmattd_rotz(rad);
+	pmattd_multiply(&mat, &rot);
 	return (mat);
 }
 
-t_mattf				nmattf_rotz(float rad)
+t_mattd				nmattd_rotz(double rad)
 {
-	const float		c = cosf(rad);
-	const float		s = sinf(rad);
+	const double		c = cos(rad);
+	const double		s = sin(rad);
 
-	return ((t_mattf){
-		(t_v3f){ c, s, 0.0f},
-		(t_v3f){ -s, c, 0.0f},
-		(t_v3f){ 0.0f, 0.0f, 1.0f},
-		(t_v3f){ 0.0f, 0.0f, 0.0f},
-		(t_v4f){ 0.0f, 0.0f, 0.0f, 1.0f}});
+	return ((t_mattd){
+		(t_v3d){ c, s, 0.0},
+		(t_v3d){ -s, c, 0.0},
+		(t_v3d){ 0.0, 0.0, 1.0},
+		(t_v3d){ 0.0, 0.0, 0.0},
+		(t_v4d){ 0.0, 0.0, 0.0, 1.0}});
 }
