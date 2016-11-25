@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 09:39:25 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 16:36:27 by qloubier         ###   ########.fr       */
+/*   Updated: 2016/11/25 18:40:38 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ t_mattf				mattf_identity(void)
 
 t_mattf				mattf_perspective(float fov, float ratio, t_v2f clip)
 {
-	fov = 1.0f / tanf(fov / 2.0f);
+	fov = tanf(fov / 2.0f);
 	return ((t_mattf){
-		(t_v3f){ fov / ratio, 0.0f, 0.0f},
-		(t_v3f){ 0.0f, fov, 0.0f},
-		(t_v3f){ 0.0f, 0.0f, ((clip.x + clip.y) / (clip.x - clip.y))},
-		(t_v3f){ 0.0f, 0.0f, ((2 * clip.x * clip.y) / (clip.x - clip.y))},
-		(t_v4f){ 0.0f, 0.0f, -1.0f, 0.0f}});
+		(t_v3f){ 1.0f / (fov * ratio), 0.0f, 0.0f},
+		(t_v3f){ 0.0f, 1 / fov, 0.0f},
+		(t_v3f){ 0.0f, 0.0f, ((clip.x + clip.y) / (clip.y - clip.x))},
+		(t_v3f){ 0.0f, 0.0f, 1.0f},
+		(t_v4f){ 0.0f, 0.0f, (-(2 * clip.x * clip.y) / (clip.y - clip.x)), 0.0f}});
 }
 
 t_mattf				mattf_ortho(int w, int h, float zoom, float limit)
