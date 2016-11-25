@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2016/09/18 17:19:37 by qloubier         ###   ########.fr        #
+#    Updated: 2016/11/25 04:19:12 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,9 @@ INCDIR=-I./include
 ifeq ($(OPSYS),Linux)
 	CFLAGS+=-Wno-strict-aliasing
 endif
-OBJ=basic.o\
-	basicf.o\
-	basicu.o\
+OBJ=utils/utils.o\
+	utils/utilsf.o\
+	utils/utilsu.o\
 	binary/bitaprox.o\
 	fixed/fromfixed.o\
 	fixed/tofixed.o\
