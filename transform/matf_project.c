@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 11:54:05 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 18:51:19 by qloubier         ###   ########.fr       */
+/*   Updated: 2016/11/26 04:39:41 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ static inline void	pmattf_vecprod(t_v4f *v, const t_mattf *mat)
 {
 	*v = (t_v4f){
 		(mat->x.x * v->x) + (mat->y.x * v->y) + (mat->z.x * v->z)
-		,
-		// + (mat->offset.x * v->w),
+		// ,
+		+ (mat->offset.x * v->w),
 		(mat->x.y * v->x) + (mat->y.y * v->y) + (mat->z.y * v->z)
-		,
-		// + (mat->offset.y * v->w),
+		// ,
+		+ (mat->offset.y * v->w),
 		(mat->x.z * v->x) + (mat->y.z * v->y) + (mat->z.z * v->z)
-		,
-		// + (mat->offset.z * v->w),
+		// ,
+		+ (mat->offset.z * v->w),
 		(mat->w.x * v->x) + (mat->w.y * v->y) + (mat->w.z * v->z)
-		+ (mat->w.w * v->w),
+		+ (mat->w.w * v->w)
 	};
 }
 
