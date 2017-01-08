@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "matrix.h"
+#include "mathex/matrix.h"
 
 t_mattf				*pmattf_trans(t_mattf *mat, t_v3f mov)
 {

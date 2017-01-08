@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "binary.h"
+#include "mathex/binary.h"
 
 int			bitceil(int num)
 {

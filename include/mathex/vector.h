@@ -13,7 +13,7 @@
 #ifndef VECTOR_H
 # define VECTOR_H
 
-# include "fixedfloat.h"
+# include "mathex/fixedfloat.h"
 
 typedef struct		s_color_rgb24
 {

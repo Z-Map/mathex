@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vector.h"
+#include "mathex/vector.h"
 
 t_v3f					v3fmulv3i(t_v3f a, t_v3i b)
 {

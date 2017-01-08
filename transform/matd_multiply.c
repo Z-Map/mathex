@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "matrix.h"
+#include "mathex/matrix.h"
 
 static inline void	pmattd_vecprod(t_v3d *v, const t_mattd *mat)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "matrix.h"
+#include "mathex/matrix.h"
 
 t_mattf				*pmattf_scale(t_mattf *mat, float size)
 {

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vector.h"
+#include "mathex/vector.h"
 
 t_v2i					v2isubv2i(t_v2i a, t_v2i b)
 {

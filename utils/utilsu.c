@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#include "mathex/utils.h"
 
 unsigned int		mxmaxu(unsigned int a, unsigned int b)
 {

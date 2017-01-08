@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vector.h"
+#include "mathex/vector.h"
 
 void			swapv2i(t_v2i *a, t_v2i *b)
 {

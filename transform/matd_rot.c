@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "matrix.h"
+#include "mathex/matrix.h"
 #include <math.h>
 
 t_mattd				*pmattd_rot(t_mattd *mat, t_v3d vrad)

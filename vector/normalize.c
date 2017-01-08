@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vector.h"
+#include "mathex/vector.h"
 #include <math.h>
 
 t_v2f					normalize2f(t_v2f v)

@@ -13,7 +13,7 @@
 #ifndef MATRIX_H
 # define MATRIX_H
 
-# include "vector.h"
+# include "mathex/vector.h"
 
 typedef	struct		s_int_matrix_2d
 {

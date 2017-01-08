@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#include "mathex/utils.h"
 
 float		mxabsf(float a)
 {

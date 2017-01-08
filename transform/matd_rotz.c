@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "matrix.h"
+#include "mathex/matrix.h"
 #include <math.h>
 
 t_mattd				*pmattd_rotz(t_mattd *mat, double rad)

@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fixedfloat.h"
-#include "mask.h"
+#include "mathex/fixedfloat.h"
+#include "mathex/mask.h"
 
 int			toifix(t_fix fixed)
 {

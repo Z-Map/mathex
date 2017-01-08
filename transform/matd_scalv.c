@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "matrix.h"
+#include "mathex/matrix.h"
 
 t_mattd				*pmattd_scalv(t_mattd *mat, t_v3d sizev)
 {
