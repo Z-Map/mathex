@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2016/11/25 14:45:41 by qloubier         ###   ########.fr        #
+#    Updated: 2017/01/28 18:40:14 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ ifeq ($(OPSYS),Linux)
 endif
 OBJ=utils/utils.o\
 	utils/utilsf.o\
+	utils/utilsfrac.o\
 	utils/utilsu.o\
 	binary/bitaprox.o\
 	fixed/fromfixed.o\

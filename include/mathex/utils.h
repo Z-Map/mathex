@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/08 04:31:29 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 04:30:52 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/01/28 18:27:58 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,8 @@ float			mxmaxf(float a, float b);
 float			mxminf(float a, float b);
 void			swap(unsigned int *a, unsigned int *b);
 void			swapf(float *a, float *b);
+
+float			mxfracf(register float d);
+double			mxfrac(register double d);
 
 #endif
