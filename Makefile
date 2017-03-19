@@ -6,13 +6,13 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2017/01/28 18:40:14 by qloubier         ###   ########.fr        #
+#    Updated: 2017/03/19 13:20:30 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 OPSYS=$(shell uname -s)
 CC=clang
-CFLAGS=-Wall -Werror -Wextra -Weverything
+CFLAGS=-Wall -Werror -Wextra
 ifdef DEBUG
 	CFLAGS+=-g
 endif
@@ -23,7 +23,10 @@ CHECK_MODE=off
 NAME=libmathex.a
 INCDIR=-I./include
 ifeq ($(OPSYS),Linux)
-	CFLAGS+=-Wno-strict-aliasing
+	CFLAGS += -Wno-strict-aliasing
+endif
+ifeq ($(CC),clang)
+	CFLAGS += -Weverything
 endif
 OBJ=utils/utils.o\
 	utils/utilsf.o\
