@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 14:37:11 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/03/27 15:37:12 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,25 @@ typedef	struct		s_int_matrix_2d
 	t_v2i			y;
 }					t_mat2i;
 
+typedef	struct		s_int_matrix_2x3d
+{
+	t_v3i			x;
+	t_v3i			y;
+}					t_mat2x3i;
+
 typedef	struct		s_int_matrix_3d
 {
 	t_v3i			x;
 	t_v3i			y;
 	t_v3i			z;
 }					t_mat3i;
+
+typedef	struct		s_int_matrix_3x4d
+{
+	t_v4i			x;
+	t_v4i			y;
+	t_v4i			z;
+}					t_mat3x4i;
 
 typedef	struct		s_int_matrix_4d
 {
@@ -42,12 +55,25 @@ typedef	struct		s_uint_matrix_2d
 	t_v2ui			y;
 }					t_mat2ui;
 
+typedef	struct		s_uint_matrix_2x3d
+{
+	t_v3ui			x;
+	t_v3ui			y;
+}					t_mat2x3ui;
+
 typedef	struct		s_uint_matrix_3d
 {
 	t_v3ui			x;
 	t_v3ui			y;
 	t_v3ui			z;
 }					t_mat3ui;
+
+typedef	struct		s_uint_matrix_3x4d
+{
+	t_v4ui			x;
+	t_v4ui			y;
+	t_v4ui			z;
+}					t_mat3x4ui;
 
 typedef	struct		s_uint_matrix_4d
 {
@@ -63,12 +89,25 @@ typedef	struct		s_float_matrix_2d
 	t_v2f			y;
 }					t_mat2f;
 
+typedef	struct		s_float_matrix_2x3d
+{
+	t_v3f			x;
+	t_v3f			y;
+}					t_mat2x3f;
+
 typedef	struct		s_float_matrix_3d
 {
 	t_v3f			x;
 	t_v3f			y;
 	t_v3f			z;
 }					t_mat3f;
+
+typedef	struct		s_float_matrix_3x4d
+{
+	t_v4f			x;
+	t_v4f			y;
+	t_v4f			z;
+}					t_mat3x4f;
 
 typedef	struct		s_float_matrix_4d
 {
@@ -84,12 +123,25 @@ typedef	struct		s_double_matrix_2d
 	t_v2d			y;
 }					t_mat2d;
 
+typedef	struct		s_double_matrix_2x3d
+{
+	t_v3d			x;
+	t_v3d			y;
+}					t_mat2x3d;
+
 typedef	struct		s_double_matrix_3d
 {
 	t_v3d			x;
 	t_v3d			y;
 	t_v3d			z;
 }					t_mat3d;
+
+typedef	struct		s_double_matrix_3x4d
+{
+	t_v4d			x;
+	t_v4d			y;
+	t_v4d			z;
+}					t_mat3x4d;
 
 typedef	struct		s_double_matrix_4d
 {
