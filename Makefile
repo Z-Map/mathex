@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2017/03/23 13:51:23 by qloubier         ###   ########.fr        #
+#    Updated: 2017/04/01 17:58:20 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -106,7 +106,7 @@ INTERN_OBJ	= $(OBJ:%=$(INTERN_BD)/%)
 INTERN_DEP	= $(INTERN_OBJ:%.o=%.d)
 BOBJ_GUARD	= $(shell if [ -d $(INTERN_BD) ]; then printf "on"; else printf "off"; fi)
 
-all: $(NAME)
+all: $(TARGETDIR)/$(NAME)
 
 $(INTERN_BD):
 	$(SILENT)mkdir -p $(INTERN_BD)
