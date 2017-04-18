@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2017/03/27 15:37:12 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/04/18 19:52:59 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@ typedef	struct		s_int_matrix_2x3d
 	t_v3i			x;
 	t_v3i			y;
 }					t_mat2x3i;
+
+typedef	struct		s_int_matrix_3x2d
+{
+	t_v2i			x;
+	t_v2i			y;
+	t_v2i			z;
+}					t_mat3x2i;
 
 typedef	struct		s_int_matrix_3d
 {
@@ -61,6 +68,13 @@ typedef	struct		s_uint_matrix_2x3d
 	t_v3ui			y;
 }					t_mat2x3ui;
 
+typedef	struct		s_uint_matrix_3x2d
+{
+	t_v2ui			x;
+	t_v2ui			y;
+	t_v2ui			z;
+}					t_mat3x2ui;
+
 typedef	struct		s_uint_matrix_3d
 {
 	t_v3ui			x;
@@ -95,6 +109,13 @@ typedef	struct		s_float_matrix_2x3d
 	t_v3f			y;
 }					t_mat2x3f;
 
+typedef	struct		s_float_matrix_3x2d
+{
+	t_v2f			x;
+	t_v2f			y;
+	t_v2f			z;
+}					t_mat3x2f;
+
 typedef	struct		s_float_matrix_3d
 {
 	t_v3f			x;
@@ -128,6 +149,13 @@ typedef	struct		s_double_matrix_2x3d
 	t_v3d			x;
 	t_v3d			y;
 }					t_mat2x3d;
+
+typedef	struct		s_double_matrix_3x2d
+{
+	t_v2d			x;
+	t_v2d			y;
+	t_v2d			z;
+}					t_mat3x2d;
 
 typedef	struct		s_double_matrix_3d
 {
