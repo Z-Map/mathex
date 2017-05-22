@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2017/04/01 17:58:20 by qloubier         ###   ########.fr        #
+#    Updated: 2017/05/22 18:39:02 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,7 @@ SRCS=utils/utils.c\
 	vector/normalize.c\
 	vector/swapf.c\
 	vector/swapd.c\
+	vector/sortd.c\
 	vector/swapi.c\
 	vector/tov4f.c\
 	vector/tov4d.c\
