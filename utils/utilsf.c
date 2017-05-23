@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/29 09:54:44 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 04:30:43 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/05/23 22:08:11 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,15 @@ float		mxminf(float a, float b)
 	return (b);
 }
 
-void		swapf(float *a, float *b)
+float		mxmaxposf(float a, float b)
 {
-	register float	tmp;
+	a = (a > b) ? a : b;
+	return ((a < 0.0f) ? 0.0f : a);
+}
 
-	tmp = *b;
-	*b = *a;
-	*a = tmp;
+float		mxminposf(float a, float b)
+{
+	if ((a < b) && (a > 0.0f))
+		return (a);
+	return ((b < 0.0f) ? 0.0f: b);
 }
