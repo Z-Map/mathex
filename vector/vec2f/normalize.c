@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add2i.c                                            :+:      :+:    :+:   */
+/*   normalize.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/16 01:06:47 by qloubier          #+#    #+#             */
-/*   Updated: 2017/05/25 14:19:46 by qloubier         ###   ########.fr       */
+/*   Created: 2017/06/02 19:39:22 by qloubier          #+#    #+#             */
+/*   Updated: 2017/06/02 19:54:47 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <math.h>
 #include "mathex/vector.h"
 
-t_v2d					v2daddv2i(t_v2d a, t_v2i b)
+t_v2f				normalize2f(t_v2f v)
 {
-	return ((t_v2d){ a.x + (double)b.x, a.y + (double)b.y });
+	const float		nor = sqrtf((v.x * v.x) + (v.y * v.y));
+
+	return ((t_v2f){v.x / nor, v.y / nor});
 }
 
-t_v2d					*pv2daddv2i(t_v2d *a, const t_v2i *b)
+t_v2f				normlen2f(t_v2f v, float *nor)
 {
-	a->x += (double)b->x;
-	a->y += (double)b->y;
-	return (a);
+	*nor = sqrtf((v.x * v.x) + (v.y * v.y));
+	return ((t_v2f){v.x / *nor, v.y / *nor});
 }

@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2017/05/23 18:57:15 by qloubier         ###   ########.fr        #
+#    Updated: 2017/06/02 19:53:47 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,6 @@ SRCS=utils/utils.c\
 	transform/matd_scalv.c\
 	transform/matd_trans.c\
 	transform/matd_utils.c\
-	vector/normalize.c\
 	vector/swapf.c\
 	vector/swapd.c\
 	vector/sortd.c\
@@ -78,10 +77,34 @@ SRCS=utils/utils.c\
 	vector/tov4d.c\
 	vector/tov4i.c\
 	vector/vec2d/add2i.c\
+	vector/vec2d/add2f.c\
+	vector/vec2d/add2d.c\
 	vector/vec2d/sub2i.c\
-	vector/vec2d/tov2f.c\
+	vector/vec2d/sub2f.c\
+	vector/vec2d/sub2d.c\
 	vector/vec2d/tov2d.c\
-	vector/vec2d/tov2i.c\
+	vector/vec2d/normalize.c\
+	vector/vec2f/add2i.c\
+	vector/vec2f/add2f.c\
+	vector/vec2f/add2d.c\
+	vector/vec2f/sub2i.c\
+	vector/vec2f/sub2f.c\
+	vector/vec2f/sub2d.c\
+	vector/vec2f/tov2f.c\
+	vector/vec2f/normalize.c\
+	vector/vec2i/add2i.c\
+	vector/vec2i/add2f.c\
+	vector/vec2i/add2d.c\
+	vector/vec2i/sub2i.c\
+	vector/vec2i/sub2f.c\
+	vector/vec2i/sub2d.c\
+	vector/vec2i/mul2i.c\
+	vector/vec2i/mul2f.c\
+	vector/vec2i/mul2d.c\
+	vector/vec2i/div2i.c\
+	vector/vec2i/div2f.c\
+	vector/vec2i/div2d.c\
+	vector/vec2i/tov2i.c\
 	vector/vec3d/add3f.c\
 	vector/vec3d/add3d.c\
 	vector/vec3d/add3i.c\
@@ -94,9 +117,35 @@ SRCS=utils/utils.c\
 	vector/vec3d/sub3f.c\
 	vector/vec3d/sub3d.c\
 	vector/vec3d/sub3i.c\
-	vector/vec3d/tov3f.c\
+	vector/vec3d/normalize.c\
+	vector/vec3f/add3f.c\
+	vector/vec3f/add3d.c\
+	vector/vec3f/add3i.c\
+	vector/vec3f/div3f.c\
+	vector/vec3f/div3d.c\
+	vector/vec3f/div3i.c\
+	vector/vec3f/mul3f.c\
+	vector/vec3f/mul3d.c\
+	vector/vec3f/mul3i.c\
+	vector/vec3f/sub3f.c\
+	vector/vec3f/sub3d.c\
+	vector/vec3f/sub3i.c\
+	vector/vec3f/normalize.c\
+	vector/vec3i/add3f.c\
+	vector/vec3i/add3d.c\
+	vector/vec3i/add3i.c\
+	vector/vec3i/div3f.c\
+	vector/vec3i/div3d.c\
+	vector/vec3i/div3i.c\
+	vector/vec3i/mul3f.c\
+	vector/vec3i/mul3d.c\
+	vector/vec3i/mul3i.c\
+	vector/vec3i/sub3f.c\
+	vector/vec3i/sub3d.c\
+	vector/vec3i/sub3i.c\
+	vector/vec3f/tov3f.c\
 	vector/vec3d/tov3d.c\
-	vector/vec3d/tov3i.c
+	vector/vec3i/tov3i.c
 
 OBJ=$(subst /,~,$(SRCS:%.c=%.o))
 

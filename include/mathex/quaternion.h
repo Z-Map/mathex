@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add2i.c                                            :+:      :+:    :+:   */
+/*   quaternion.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/16 01:06:47 by qloubier          #+#    #+#             */
-/*   Updated: 2017/05/25 14:19:46 by qloubier         ###   ########.fr       */
+/*   Created: 2017/05/24 23:38:10 by qloubier          #+#    #+#             */
+/*   Updated: 2017/05/25 13:28:21 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mathex/vector.h"
+#ifndef QUATERNION_H
+#define QUATERNION_H
 
-t_v2d					v2daddv2i(t_v2d a, t_v2i b)
+typedef struct		s_quaternion
 {
-	return ((t_v2d){ a.x + (double)b.x, a.y + (double)b.y });
-}
+	double			r;
+	double			i;
+	double			j;
+	double			k;
+}					t_quat;
 
-t_v2d					*pv2daddv2i(t_v2d *a, const t_v2i *b)
+typedef struct		s_quaternion_float
 {
-	a->x += (double)b->x;
-	a->y += (double)b->y;
-	return (a);
-}
+	float			r;
+	float			i;
+	float			j;
+	float			k;
+}					t_quatf;
+
+t_quat		quat_identity();
+t_quat		quat_mult();
+
+#endif

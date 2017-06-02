@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add2i.c                                            :+:      :+:    :+:   */
+/*   add3i.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 01:06:47 by qloubier          #+#    #+#             */
-/*   Updated: 2017/05/25 14:19:46 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/05/25 00:58:54 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/vector.h"
 
-t_v2d					v2daddv2i(t_v2d a, t_v2i b)
+t_v3f					v3faddv3i(t_v3f a, t_v3i b)
 {
-	return ((t_v2d){ a.x + (double)b.x, a.y + (double)b.y });
+	return ((t_v3f){ a.x + (float)(b.x),
+		a.y + (float)(b.y),
+		a.z + (float)(b.z)});
 }
 
-t_v2d					*pv2daddv2i(t_v2d *a, const t_v2i *b)
+t_v3f					*pv3faddv3i(t_v3f *a, const t_v3i *b)
 {
-	a->x += (double)b->x;
-	a->y += (double)b->y;
+	a->x += (float)(b->x);
+	a->y += (float)(b->y);
+	a->z += (float)(b->z);
 	return (a);
 }
