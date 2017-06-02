@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   normalize.c                                        :+:      :+:    :+:   */
+/*   dot.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/02 19:39:22 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/02 21:53:09 by qloubier         ###   ########.fr       */
+/*   Created: 2017/06/02 20:41:32 by qloubier          #+#    #+#             */
+/*   Updated: 2017/06/02 21:37:30 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <math.h>
 #include "mathex/vector.h"
 
-t_v2f				normalized2f(t_v2f v)
+float		v2fdotv2f(const t_v2f a, const t_v2f b)
 {
-	const float		nor = sqrtf((v.x * v.x) + (v.y * v.y));
-
-	return ((t_v2f){v.x / nor, v.y / nor});
+	return (a.x * b.x + a.y * b.y);
 }
 
-t_v2f				*normalize2f(t_v2f *v)
+float		v2fdotv2d(const t_v2f a, const t_v2d b)
 {
-	const float		nor = sqrtf((v->x * v->x) + (v->y * v->y));
-
-	*v = (t_v2f){v->x / nor, v->y / nor};
-	return (v);
-}
-
-t_v2f				normlen2f(t_v2f v, float *nor)
-{
-	*nor = sqrtf((v.x * v.x) + (v.y * v.y));
-	return ((t_v2f){v.x / *nor, v.y / *nor});
+	return (a.x * (float)b.x + a.y * (float)b.y);
 }

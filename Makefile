@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2017/06/02 19:53:47 by qloubier         ###   ########.fr        #
+#    Updated: 2017/06/02 21:44:16 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ SRCS=utils/utils.c\
 	vector/swapf.c\
 	vector/swapd.c\
 	vector/sortd.c\
+	vector/sortf.c\
 	vector/swapi.c\
 	vector/tov4f.c\
 	vector/tov4d.c\
@@ -84,6 +85,7 @@ SRCS=utils/utils.c\
 	vector/vec2d/sub2d.c\
 	vector/vec2d/tov2d.c\
 	vector/vec2d/normalize.c\
+	vector/vec2d/dot.c\
 	vector/vec2f/add2i.c\
 	vector/vec2f/add2f.c\
 	vector/vec2f/add2d.c\
@@ -92,6 +94,7 @@ SRCS=utils/utils.c\
 	vector/vec2f/sub2d.c\
 	vector/vec2f/tov2f.c\
 	vector/vec2f/normalize.c\
+	vector/vec2f/dot.c\
 	vector/vec2i/add2i.c\
 	vector/vec2i/add2f.c\
 	vector/vec2i/add2d.c\
@@ -118,6 +121,7 @@ SRCS=utils/utils.c\
 	vector/vec3d/sub3d.c\
 	vector/vec3d/sub3i.c\
 	vector/vec3d/normalize.c\
+	vector/vec3d/dot.c\
 	vector/vec3f/add3f.c\
 	vector/vec3f/add3d.c\
 	vector/vec3f/add3i.c\
@@ -131,6 +135,7 @@ SRCS=utils/utils.c\
 	vector/vec3f/sub3d.c\
 	vector/vec3f/sub3i.c\
 	vector/vec3f/normalize.c\
+	vector/vec3f/dot.c\
 	vector/vec3i/add3f.c\
 	vector/vec3i/add3d.c\
 	vector/vec3i/add3i.c\
