@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/03 17:47:59 by qloubier          #+#    #+#             */
-/*   Updated: 2016/04/21 14:58:27 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/02 20:55:56 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 t_mattf				*pmattf_trans(t_mattf *mat, t_v3f mov)
 {
-	pv3faddv3f(&(mat->offset), &mov);
+	pv3faddv3f(&(mat->offset), mov);
 	return (mat);
 }
 
 t_mattf				mattf_trans(t_mattf mat, t_v3f mov)
 {
-	pv3faddv3f(&(mat.offset), &mov);
+	pv3faddv3f(&(mat.offset), mov);
 	return (mat);
 }
 

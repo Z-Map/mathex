@@ -17,9 +17,9 @@ t_v2f					v2fsubv2i(t_v2f a, t_v2i b)
 	return ((t_v2f){ a.x - (float)b.x, a.y - (float)b.y });
 }
 
-t_v2f					*pv2fsubv2i(t_v2f *a, const t_v2i *b)
+t_v2f					*pv2fsubv2i(t_v2f *a, const t_v2i b)
 {
-	a->x -= (float)b->x;
-	a->y -= (float)b->y;
+	a->x -= (float)b.x;
+	a->y -= (float)b.y;
 	return (a);
 }

@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 01:12:31 by qloubier          #+#    #+#             */
-/*   Updated: 2017/05/25 00:59:48 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/02 20:58:35 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ t_v3f					v3fsubv3f(t_v3f a, t_v3f b)
 	return ((t_v3f){ a.x - b.x, a.y - b.y, a.z - b.z});
 }
 
-t_v3f					*pv3fsubv3f(t_v3f *a, const t_v3f *b)
+t_v3f					*pv3fsubv3f(t_v3f *a, const t_v3f b)
 {
-	a->x -= b->x;
-	a->y -= b->y;
-	a->z -= b->z;
+	a->x -= b.x;
+	a->y -= b.y;
+	a->z -= b.z;
 	return (a);
 }

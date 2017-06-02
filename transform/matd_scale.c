@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 09:27:57 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/25 05:03:10 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/02 20:53:16 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ t_mattd				*pmattd_scale(t_mattd *mat, double size)
 {
 	const t_v3d		s = nv3d(size);
 
-	pv3dmulv3d(&(mat->x), &s);
-	pv3dmulv3d(&(mat->y), &s);
-	pv3dmulv3d(&(mat->z), &s);
+	pv3dmulv3d(&(mat->x), s);
+	pv3dmulv3d(&(mat->y), s);
+	pv3dmulv3d(&(mat->z), s);
 	return (mat);
 }
 
@@ -26,9 +26,9 @@ t_mattd				mattd_scale(t_mattd mat, double size)
 {
 	const t_v3d		s = nv3d(size);
 
-	pv3dmulv3d(&(mat.x), &s);
-	pv3dmulv3d(&(mat.y), &s);
-	pv3dmulv3d(&(mat.z), &s);
+	pv3dmulv3d(&(mat.x), s);
+	pv3dmulv3d(&(mat.y), s);
+	pv3dmulv3d(&(mat.z), s);
 	return (mat);
 }
 

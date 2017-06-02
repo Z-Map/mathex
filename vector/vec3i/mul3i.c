@@ -17,10 +17,10 @@ t_v3i					v3imulv3i(t_v3i a, t_v3i b)
 	return ((t_v3i){ a.x * b.x, a.y * b.y, a.z * b.z});
 }
 
-t_v3i					*pv3imulv3i(t_v3i *a, const t_v3i *b)
+t_v3i					*pv3imulv3i(t_v3i *a, const t_v3i b)
 {
-	a->x *= b->x;
-	a->y *= b->y;
-	a->z *= b->z;
+	a->x *= b.x;
+	a->y *= b.y;
+	a->z *= b.z;
 	return (a);
 }

@@ -17,9 +17,9 @@ t_v2d					v2dsubv2f(t_v2d a, t_v2f b)
 	return ((t_v2d){ a.x - (double)b.x, a.y - (double)b.y });
 }
 
-t_v2d					*pv2dsubv2f(t_v2d *a, const t_v2f *b)
+t_v2d					*pv2dsubv2f(t_v2d *a, const t_v2f b)
 {
-	a->x -= (double)b->x;
-	a->y -= (double)b->y;
+	a->x -= (double)b.x;
+	a->y -= (double)b.y;
 	return (a);
 }

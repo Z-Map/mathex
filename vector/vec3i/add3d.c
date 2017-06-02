@@ -19,10 +19,10 @@ t_v3i					v3iaddv3d(t_v3i a, t_v3d b)
 		a.z + (int)(b.z)});
 }
 
-t_v3i					*pv3iaddv3d(t_v3i *a, const t_v3d *b)
+t_v3i					*pv3iaddv3d(t_v3i *a, const t_v3d b)
 {
-	a->x += (int)(b->x);
-	a->y += (int)(b->y);
-	a->z += (int)(b->z);
+	a->x += (int)(b.x);
+	a->y += (int)(b.y);
+	a->z += (int)(b.z);
 	return (a);
 }

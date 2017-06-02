@@ -17,9 +17,9 @@ t_v2f					v2faddv2f(t_v2f a, t_v2f b)
 	return ((t_v2f){ a.x + b.x, a.y + b.y });
 }
 
-t_v2f					*pv2faddv2f(t_v2f *a, const t_v2f *b)
+t_v2f					*pv2faddv2f(t_v2f *a, const t_v2f b)
 {
-	a->x += b->x;
-	a->y += b->y;
+	a->x += b.x;
+	a->y += b.y;
 	return (a);
 }

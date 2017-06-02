@@ -19,10 +19,10 @@ t_v3f					v3fmulv3i(t_v3f a, t_v3i b)
 		a.z * (float)(b.z)});
 }
 
-t_v3f					*pv3fmulv3i(t_v3f *a, const t_v3i *b)
+t_v3f					*pv3fmulv3i(t_v3f *a, const t_v3i b)
 {
-	a->x *= (float)(b->x);
-	a->y *= (float)(b->y);
-	a->z *= (float)(b->z);
+	a->x *= (float)(b.x);
+	a->y *= (float)(b.y);
+	a->z *= (float)(b.z);
 	return (a);
 }

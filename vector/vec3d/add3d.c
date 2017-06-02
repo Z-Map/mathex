@@ -19,10 +19,10 @@ t_v3d					v3daddv3d(t_v3d a, t_v3d b)
 		a.z + (double)(b.z)});
 }
 
-t_v3d					*pv3daddv3d(t_v3d *a, const t_v3d *b)
+t_v3d					*pv3daddv3d(t_v3d *a, const t_v3d b)
 {
-	a->x += b->x;
-	a->y += b->y;
-	a->z += b->z;
+	a->x += b.x;
+	a->y += b.y;
+	a->z += b.z;
 	return (a);
 }

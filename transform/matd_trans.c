@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   matf_trans.c                                       :+:      :+:    :+:   */
+/*   matd_trans.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/03 17:47:59 by qloubier          #+#    #+#             */
-/*   Updated: 2016/04/21 14:58:27 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/02 20:53:41 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 t_mattd				*pmattd_trans(t_mattd *mat, t_v3d mov)
 {
-	pv3daddv3d(&(mat->offset), &mov);
+	pv3daddv3d(&(mat->offset), mov);
 	return (mat);
 }
 
 t_mattd				mattd_trans(t_mattd mat, t_v3d mov)
 {
-	pv3daddv3d(&(mat.offset), &mov);
+	pv3daddv3d(&(mat.offset), mov);
 	return (mat);
 }
 
