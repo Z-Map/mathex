@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2017/06/02 21:44:16 by qloubier         ###   ########.fr        #
+#    Updated: 2017/06/09 09:06:21 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,8 @@ SRCS=utils/utils.c\
 	vector/tov4f.c\
 	vector/tov4d.c\
 	vector/tov4i.c\
+	vector/uv.c\
+	vector/color/convert.c\
 	vector/vec2d/add2i.c\
 	vector/vec2d/add2f.c\
 	vector/vec2d/add2d.c\
@@ -122,6 +124,7 @@ SRCS=utils/utils.c\
 	vector/vec3d/sub3i.c\
 	vector/vec3d/normalize.c\
 	vector/vec3d/dot.c\
+	vector/vec3d/cross.c\
 	vector/vec3f/add3f.c\
 	vector/vec3f/add3d.c\
 	vector/vec3f/add3i.c\
@@ -136,6 +139,7 @@ SRCS=utils/utils.c\
 	vector/vec3f/sub3i.c\
 	vector/vec3f/normalize.c\
 	vector/vec3f/dot.c\
+	vector/vec3f/cross.c\
 	vector/vec3i/add3f.c\
 	vector/vec3i/add3d.c\
 	vector/vec3i/add3i.c\

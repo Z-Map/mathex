@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/02 21:59:22 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/09 09:02:05 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,6 +168,11 @@ t_v2d				v4to2d(t_v4d vec);
 t_v3d				v2to3d(t_v2d vec);
 t_v3d				v4to3d(t_v4d vec);
 
+t_v4f				rgbatov4f(t_rgba col);
+t_v3f				rgbatov3f(t_rgba col);
+t_v3f				rgbtov3f(t_rgb col);
+t_v4f				rgbtov4f(t_rgb col);
+
 void				swapv2i(t_v2i *a, t_v2i *b);
 void				swapv3i(t_v3i *a, t_v3i *b);
 void				swapv4i(t_v4i *a, t_v4i *b);
@@ -187,6 +192,11 @@ t_v4f				sortv4f(t_v4f a);
 t_v2d				sortv2d(t_v2d a);
 t_v3d				sortv3d(t_v3d a);
 t_v4d				sortv4d(t_v4d a);
+
+unsigned long		uvl(unsigned int x, unsigned int y, unsigned int xlen);
+unsigned long		uvtolen(t_v2ui uv, unsigned int x);
+unsigned long		uvitolen(t_v2i uv, unsigned int x);
+unsigned long		uvftolen(t_v2f uv, unsigned int x);
 
 /*
 ** v2i tool
@@ -369,6 +379,11 @@ t_v3f				normlen3f(t_v3f v, float *nor);
 float				v3fdotv3f(const t_v3f a, const t_v3f b);
 float				v3fdotv3d(const t_v3f a, const t_v3d b);
 
+t_v3f				v3fcrossv3f(const t_v3f a, const t_v3f b);
+t_v3f				v3fcrossv3d(const t_v3f a, const t_v3d b);
+t_v3f				*pv3fcrossv3f(t_v3f *v, const t_v3f b);
+t_v3f				*pv3fcrossv3d(t_v3f *v, const t_v3d b);
+
 /*
 ** v3d tool
 */
@@ -407,6 +422,11 @@ t_v3d				normlen3d(t_v3d v, double *nor);
 
 double				v3ddotv3d(const t_v3d a, const t_v3d b);
 double				v3ddotv3f(const t_v3d a, const t_v3f b);
+
+t_v3d				v3dcrossv3d(const t_v3d a, const t_v3d b);
+t_v3d				v3dcrossv3f(const t_v3d a, const t_v3f b);
+t_v3d				*pv3dcrossv3d(t_v3d *v, const t_v3d b);
+t_v3d				*pv3dcrossv3f(t_v3d *v, const t_v3f b);
 
 
 /*
