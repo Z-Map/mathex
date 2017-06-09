@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2017/06/09 09:06:21 by qloubier         ###   ########.fr        #
+#    Updated: 2017/06/09 09:45:28 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -154,7 +154,21 @@ SRCS=utils/utils.c\
 	vector/vec3i/sub3i.c\
 	vector/vec3f/tov3f.c\
 	vector/vec3d/tov3d.c\
-	vector/vec3i/tov3i.c
+	vector/vec3i/tov3i.c\
+	vector/vec4f/add4f.c\
+	vector/vec4f/add4d.c\
+	vector/vec4f/add4i.c\
+	vector/vec4f/div4f.c\
+	vector/vec4f/div4d.c\
+	vector/vec4f/div4i.c\
+	vector/vec4f/mul4f.c\
+	vector/vec4f/mul4d.c\
+	vector/vec4f/mul4i.c\
+	vector/vec4f/sub4f.c\
+	vector/vec4f/sub4d.c\
+	vector/vec4f/sub4i.c\
+	vector/vec4f/normalize.c\
+	vector/vec4f/dot.c
 
 OBJ=$(subst /,~,$(SRCS:%.c=%.o))
 

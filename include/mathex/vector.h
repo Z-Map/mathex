@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/09 09:02:05 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/09 09:35:58 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -428,12 +428,49 @@ t_v3d				v3dcrossv3f(const t_v3d a, const t_v3f b);
 t_v3d				*pv3dcrossv3d(t_v3d *v, const t_v3d b);
 t_v3d				*pv3dcrossv3f(t_v3d *v, const t_v3f b);
 
-
 /*
-** Normalisation
+** v4f tool
 */
 
-t_v3d				normalize4d(t_v3d v);
-t_v3f				normalize4f(t_v3f v);
+t_v4f				v4faddv4i(t_v4f a, t_v4i b);
+t_v4f				v4faddv4f(t_v4f a, t_v4f b);
+t_v4f				v4faddv4d(t_v4f a, t_v4d b);
+t_v4f				*pv4faddv4i(t_v4f *a, const t_v4i b);
+t_v4f				*pv4faddv4f(t_v4f *a, const t_v4f b);
+t_v4f				*pv4faddv4d(t_v4f *a, const t_v4d b);
+
+t_v4f				v4fsubv4i(t_v4f a, t_v4i b);
+t_v4f				v4fsubv4f(t_v4f a, t_v4f b);
+t_v4f				v4fsubv4d(t_v4f a, t_v4d b);
+t_v4f				*pv4fsubv4i(t_v4f *a, const t_v4i b);
+t_v4f				*pv4fsubv4f(t_v4f *a, const t_v4f b);
+t_v4f				*pv4fsubv4d(t_v4f *a, const t_v4d b);
+
+t_v4f				v4fmulv4i(t_v4f a, t_v4i b);
+t_v4f				v4fmulv4f(t_v4f a, t_v4f b);
+t_v4f				v4fmulv4d(t_v4f a, t_v4d b);
+t_v4f				*pv4fmulv4i(t_v4f *a, const t_v4i b);
+t_v4f				*pv4fmulv4f(t_v4f *a, const t_v4f b);
+t_v4f				*pv4fmulv4d(t_v4f *a, const t_v4d b);
+
+t_v4f				v4fdivv4i(t_v4f a, t_v4i b);
+t_v4f				v4fdivv4f(t_v4f a, t_v4f b);
+t_v4f				v4fdivv4d(t_v4f a, t_v4d b);
+t_v4f				*pv4fdivv4i(t_v4f *a, const t_v4i b);
+t_v4f				*pv4fdivv4f(t_v4f *a, const t_v4f b);
+t_v4f				*pv4fdivv4d(t_v4f *a, const t_v4d b);
+
+t_v4f				*normalize4f(t_v4f *v);
+t_v4f				normalized4f(t_v4f v);
+t_v4f				normlen4f(t_v4f v, float *nor);
+
+float				v4fdotv4f(const t_v4f a, const t_v4f b);
+float				v4fdotv4d(const t_v4f a, const t_v4d b);
+
+t_v4f				v4fcrossv4f(const t_v4f a, const t_v4f b);
+t_v4f				v4fcrossv4d(const t_v4f a, const t_v4d b);
+t_v4f				*pv4fcrossv4f(t_v4f *v, const t_v4f b);
+t_v4f				*pv4fcrossv4d(t_v4f *v, const t_v4d b);
+
 
 #endif
