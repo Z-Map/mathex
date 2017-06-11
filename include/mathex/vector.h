@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/11 22:24:55 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/11 22:51:12 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,6 +172,10 @@ t_v4f				rgbatov4f(t_rgba col);
 t_v3f				rgbatov3f(t_rgba col);
 t_v3f				rgbtov3f(t_rgb col);
 t_v4f				rgbtov4f(t_rgb col);
+t_rgba				v4ftorgba(t_v4f vcol);
+t_rgb				v4ftorgb(t_v4f vcol);
+t_rgba				v3ftorgba(t_v3f vcol);
+t_rgb				v3ftorgb(t_v3f vcol);
 
 void				swapv2i(t_v2i *a, t_v2i *b);
 void				swapv3i(t_v3i *a, t_v3i *b);
