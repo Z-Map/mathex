@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2017/06/11 17:38:40 by qloubier         ###   ########.fr        #
+#    Updated: 2017/06/11 22:31:27 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,6 +95,12 @@ SRCS=utils/utils.c\
 	vector/vec2f/sub2i.c\
 	vector/vec2f/sub2f.c\
 	vector/vec2f/sub2d.c\
+	vector/vec2f/mul2i.c\
+	vector/vec2f/mul2f.c\
+	vector/vec2f/mul2d.c\
+	vector/vec2f/div2i.c\
+	vector/vec2f/div2f.c\
+	vector/vec2f/div2d.c\
 	vector/vec2f/tov2f.c\
 	vector/vec2f/normalize.c\
 	vector/vec2f/dot.c\

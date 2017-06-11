@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/11 22:20:28 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/11 22:24:55 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -243,19 +243,19 @@ t_v2f				*pv2fsubv2i(t_v2f *a, const t_v2i b);
 t_v2f				*pv2fsubv2f(t_v2f *a, const t_v2f b);
 t_v2f				*pv2fsubv2d(t_v2f *a, const t_v2d b);
 
-t_v2f				v2fmulv2i(t_v2f a, t_v3i b);
-t_v2f				v2fmulv2f(t_v2f a, t_v3f b);
-t_v2f				v2fmulv2d(t_v2f a, t_v3d b);
-t_v2f				*pv2fmulv2i(t_v2f *a, const t_v3i b);
-t_v2f				*pv2fmulv2f(t_v2f *a, const t_v3f b);
-t_v2f				*pv2fmulv2d(t_v2f *a, const t_v3d b);
+t_v2f				v2fmulv2i(t_v2f a, t_v2i b);
+t_v2f				v2fmulv2f(t_v2f a, t_v2f b);
+t_v2f				v2fmulv2d(t_v2f a, t_v2d b);
+t_v2f				*pv2fmulv2i(t_v2f *a, const t_v2i b);
+t_v2f				*pv2fmulv2f(t_v2f *a, const t_v2f b);
+t_v2f				*pv2fmulv2d(t_v2f *a, const t_v2d b);
 
-t_v2f				v2fdivv2i(t_v2f a, t_v3i b);
-t_v2f				v2fdivv2f(t_v2f a, t_v3f b);
-t_v2f				v2fdivv2d(t_v2f a, t_v3d b);
-t_v2f				*pv2fdivv2i(t_v2f *a, const t_v3i b);
-t_v2f				*pv2fdivv2f(t_v2f *a, const t_v3f b);
-t_v2f				*pv2fdivv2d(t_v2f *a, const t_v3d b);
+t_v2f				v2fdivv2i(t_v2f a, t_v2i b);
+t_v2f				v2fdivv2f(t_v2f a, t_v2f b);
+t_v2f				v2fdivv2d(t_v2f a, t_v2d b);
+t_v2f				*pv2fdivv2i(t_v2f *a, const t_v2i b);
+t_v2f				*pv2fdivv2f(t_v2f *a, const t_v2f b);
+t_v2f				*pv2fdivv2d(t_v2f *a, const t_v2d b);
 
 t_v2f				*normalize2f(t_v2f *v);
 t_v2f				normalized2f(t_v2f v);
