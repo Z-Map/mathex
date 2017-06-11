@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/11 14:05:44 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/11 14:49:14 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -371,6 +371,8 @@ t_v3f				v3fdivv3d(t_v3f a, t_v3d b);
 t_v3f				*pv3fdivv3i(t_v3f *a, const t_v3i b);
 t_v3f				*pv3fdivv3f(t_v3f *a, const t_v3f b);
 t_v3f				*pv3fdivv3d(t_v3f *a, const t_v3d b);
+
+float				len3f(t_v3f v);
 
 t_v3f				*normalize3f(t_v3f *v);
 t_v3f				normalized3f(t_v3f v);
