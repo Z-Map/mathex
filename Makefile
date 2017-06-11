@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2017/06/11 17:23:24 by qloubier         ###   ########.fr        #
+#    Updated: 2017/06/11 17:38:40 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,8 @@ SRCS=utils/utils.c\
 	vector/tov4f.c\
 	vector/tov4d.c\
 	vector/tov4i.c\
-	vector/uv.c\
+	vector/uv/tolen.c\
+	vector/uv/spherical.c\
 	vector/color/convert.c\
 	vector/vec2d/add2i.c\
 	vector/vec2d/add2f.c\

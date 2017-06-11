@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/11 14:49:14 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/11 22:20:28 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -192,11 +192,6 @@ t_v4f				sortv4f(t_v4f a);
 t_v2d				sortv2d(t_v2d a);
 t_v3d				sortv3d(t_v3d a);
 t_v4d				sortv4d(t_v4d a);
-
-unsigned long		uvl(unsigned int x, unsigned int y, unsigned int xlen);
-unsigned long		uvtolen(t_v2ui uv, unsigned int x);
-unsigned long		uvitolen(t_v2i uv, unsigned int x);
-unsigned long		uvftolen(t_v2f uv, unsigned int x);
 
 /*
 ** v2i tool
@@ -478,5 +473,15 @@ t_v4f				v4fcrossv4d(const t_v4f a, const t_v4d b);
 t_v4f				*pv4fcrossv4f(t_v4f *v, const t_v4f b);
 t_v4f				*pv4fcrossv4d(t_v4f *v, const t_v4d b);
 
+/*
+** UV tools
+*/
+
+t_v2f				nortouv(t_v3f nor);
+
+unsigned long		uvl(unsigned int x, unsigned int y, unsigned int xlen);
+unsigned long		uvtolen(t_v2ui uv, unsigned int x);
+unsigned long		uvitolen(t_v2i uv, unsigned int x);
+unsigned long		uvftolen(t_v2f uv, unsigned int x);
 
 #endif
