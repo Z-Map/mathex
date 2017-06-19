@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/21 01:37:48 by qloubier          #+#    #+#             */
-/*   Updated: 2016/02/21 01:37:57 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/19 11:32:01 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,14 @@
 t_v4f					nv4f(float i)
 {
 	return ((t_v4f){i, i, i, i});
+}
+
+t_v4f				v2to4f(t_v2f vec)
+{
+	return ((t_v4f){vec.x, vec.y, 0.0, 0.0});
+}
+
+t_v4f				v3to4f(t_v3f vec)
+{
+	return ((t_v4f){vec.x, vec.y, vec.z, 0.0});
 }

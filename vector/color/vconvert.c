@@ -6,12 +6,12 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/11 22:51:15 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/11 22:55:38 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/19 11:34:42 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/utils.h"
-#include "mathex/vector.h"
+#include "mathex/color.h"
 
 t_rgba				v4ftorgba(t_v4f vcol)
 {

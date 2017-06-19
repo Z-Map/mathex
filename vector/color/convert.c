@@ -6,11 +6,11 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/09 08:13:14 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/09 08:24:57 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/19 11:34:29 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mathex/vector.h"
+#include "mathex/color.h"
 
 t_v4f				rgbatov4f(t_rgba col)
 {

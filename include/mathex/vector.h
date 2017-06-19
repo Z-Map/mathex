@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/11 22:51:12 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/19 11:27:17 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,52 +14,6 @@
 # define VECTOR_H
 
 # include "mathex/fixedfloat.h"
-
-typedef struct		s_color_rgb24
-{
-	unsigned char	r;
-	unsigned char	g;
-	unsigned char	b;
-}					t_rgb;
-
-typedef struct		s_color_bgr24
-{
-	unsigned char	b;
-	unsigned char	g;
-	unsigned char	r;
-}					t_bgr;
-
-typedef struct		s_color_rgba32
-{
-	unsigned char	r;
-	unsigned char	g;
-	unsigned char	b;
-	unsigned char	a;
-}					t_rgba;
-
-typedef struct		s_color_bgra32
-{
-	unsigned char	b;
-	unsigned char	g;
-	unsigned char	r;
-	unsigned char	a;
-}					t_bgra;
-
-typedef struct		s_color_argb32
-{
-	unsigned char	a;
-	unsigned char	r;
-	unsigned char	g;
-	unsigned char	b;
-}					t_argb;
-
-typedef struct		s_color_abgr32
-{
-	unsigned char	a;
-	unsigned char	b;
-	unsigned char	g;
-	unsigned char	r;
-}					t_abgr;
 
 typedef struct		s_int_vector_2d
 {
@@ -159,23 +113,22 @@ t_v2i				v3to2i(t_v3i vec);
 t_v2i				v4to2i(t_v4i vec);
 t_v3i				v2to3i(t_v2i vec);
 t_v3i				v4to3i(t_v4i vec);
+t_v4i				v2to4i(t_v2i vec);
+t_v4i				v3to4i(t_v3i vec);
+
 t_v2f				v3to2f(t_v3f vec);
 t_v2f				v4to2f(t_v4f vec);
 t_v3f				v2to3f(t_v2f vec);
 t_v3f				v4to3f(t_v4f vec);
+t_v4f				v2to4f(t_v2f vec);
+t_v4f				v3to4f(t_v3f vec);
+
 t_v2d				v3to2d(t_v3d vec);
 t_v2d				v4to2d(t_v4d vec);
 t_v3d				v2to3d(t_v2d vec);
 t_v3d				v4to3d(t_v4d vec);
-
-t_v4f				rgbatov4f(t_rgba col);
-t_v3f				rgbatov3f(t_rgba col);
-t_v3f				rgbtov3f(t_rgb col);
-t_v4f				rgbtov4f(t_rgb col);
-t_rgba				v4ftorgba(t_v4f vcol);
-t_rgb				v4ftorgb(t_v4f vcol);
-t_rgba				v3ftorgba(t_v3f vcol);
-t_rgb				v3ftorgb(t_v3f vcol);
+t_v4d				v2to4d(t_v2d vec);
+t_v4d				v3to4d(t_v3d vec);
 
 void				swapv2i(t_v2i *a, t_v2i *b);
 void				swapv3i(t_v3i *a, t_v3i *b);

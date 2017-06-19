@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2017/06/11 22:56:02 by qloubier         ###   ########.fr        #
+#    Updated: 2017/06/19 11:36:53 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,10 @@ SRCS=utils/utils.c\
 	utils/utilsfrac.c\
 	utils/utilsu.c\
 	utils/swap.c\
+	utils/range.c\
+	utils/lerpi.c\
+	utils/lerpf.c\
+	utils/lerpd.c\
 	binary/bitaprox.c\
 	fixed/fromfixed.c\
 	fixed/tofixed.c\

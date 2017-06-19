@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/08 04:31:29 by qloubier          #+#    #+#             */
-/*   Updated: 2017/05/23 22:08:07 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/19 11:19:41 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,22 @@ void			swapf(float *a, float *b);
 
 float			mxfracf(register float d);
 double			mxfrac(register double d);
+
+int				mxrange(int a, int min, int max);
+unsigned int	mxrangeu(unsigned int a, unsigned int min, unsigned int max);
+float			mxrangef(float a, float min, float max);
+double			mxranged(double a, double min, double max);
+
+int				mxlerpi(int a, int b, float coef);
+float			mxlerp(float a, float b, float coef);
+double			mxlerpd(double a, double b, double coef);
+
+int				mxbilerpi(int v[4], float coef[2]);
+float			mxbilerp(float v[4], float coef[2]);
+double			mxbilerpd(double v[4], double coef[2]);
+
+int				mxtrilerpi(int v[8], float coef[3]);
+float			mxtrilerp(float v[8], float coef[3]);
+double			mxtrilerpd(double v[8], double coef[3]);
 
 #endif
