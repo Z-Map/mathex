@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/06 18:09:51 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/19 11:24:33 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/06/29 16:49:57 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,11 @@ t_rgba				v4ftorgba(t_v4f vcol);
 t_rgb				v4ftorgb(t_v4f vcol);
 t_rgba				v3ftorgba(t_v3f vcol);
 t_rgb				v3ftorgb(t_v3f vcol);
+
+unsigned int		v4ftoui(t_v4f vcol);
+unsigned int		v3ftoui(t_v3f vcol);
+unsigned int		rgbatoui(t_rgba col);
+unsigned int		rgbtoui(t_rgb vcol);
+
 
 #endif
