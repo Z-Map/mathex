@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2017/06/29 16:50:20 by qloubier         ###   ########.fr        #
+#    Updated: 2017/07/04 01:53:50 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -188,6 +188,7 @@ SRCS=utils/utils.c\
 	quaternion/quat_mult.c\
 	quaternion/quat_inv.c\
 	quaternion/quat_rot.c\
+	quaternion/quat_to_transform.c\
 	quaternion/quat_to_matrix.c
 
 OBJ=$(subst /,~,$(SRCS:%.c=%.o))
