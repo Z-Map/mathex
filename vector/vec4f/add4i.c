@@ -12,15 +12,15 @@
 
 #include "mathex/vector.h"
 
-t_v4f					v4faddv4i(t_v4f a, t_v4i b)
+v4f					v4faddv4i(v4f a, v4i b)
 {
-	return ((t_v4f){ a.x + (float)(b.x),
+	return ((v4f){ a.x + (float)(b.x),
 		a.y + (float)(b.y),
 		a.z + (float)(b.z),
 		a.w + (float)(b.w)});
 }
 
-t_v4f					*pv4faddv4i(t_v4f *a, const t_v4i b)
+v4f					*pv4faddv4i(v4f *a, const v4i b)
 {
 	a->x += (float)(b.x);
 	a->y += (float)(b.y);

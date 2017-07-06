@@ -12,22 +12,22 @@
 
 #include "mathex/quaternion.h"
 
-t_quat				quat_inv(const t_quat q)
+quat				quat_inv(const quat q)
 {
 	const double	t = 1 / (q.r * q.r + q.i * q.i + q.j * q.j + q.k * q.k);
 
-	return ((t_quat){
+	return ((quat){
 		.r = t * q.r,
 		.i = -t * q.i,
 		.j = -t * q.j,
 		.k = -t * q.k});
 }
 
-t_quatf				quatf_inv(const t_quatf q)
+quatf				quatf_inv(const quatf q)
 {
 	const float		t = 1 / (q.r * q.r + q.i * q.i + q.j * q.j + q.k * q.k);
 
-	return ((t_quatf){
+	return ((quatf){
 		.r = t * q.r,
 		.i = -t * q.i,
 		.j = -t * q.j,

@@ -12,14 +12,14 @@
 
 #include "mathex/vector.h"
 
-t_v3f					v3faddv3i(t_v3f a, t_v3i b)
+v3f					v3faddv3i(v3f a, v3i b)
 {
-	return ((t_v3f){ a.x + (float)(b.x),
+	return ((v3f){ a.x + (float)(b.x),
 		a.y + (float)(b.y),
 		a.z + (float)(b.z)});
 }
 
-t_v3f					*pv3faddv3i(t_v3f *a, const t_v3i b)
+v3f					*pv3faddv3i(v3f *a, const v3i b)
 {
 	a->x += (float)(b.x);
 	a->y += (float)(b.y);

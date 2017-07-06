@@ -12,12 +12,12 @@
 
 #include "mathex/vector.h"
 
-t_v4f					v4fdivv4f(t_v4f a, t_v4f b)
+v4f					v4fdivv4f(v4f a, v4f b)
 {
-	return ((t_v4f){ a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w});
+	return ((v4f){ a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w});
 }
 
-t_v4f					*pv4fdivv4f(t_v4f *a, const t_v4f b)
+v4f					*pv4fdivv4f(v4f *a, const v4f b)
 {
 	a->x /= b.x;
 	a->y /= b.y;

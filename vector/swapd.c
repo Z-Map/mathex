@@ -12,27 +12,27 @@
 
 #include "mathex/vector.h"
 
-void			swapv2d(t_v2d *a, t_v2d *b)
+void			swapv2d(v2d *a, v2d *b)
 {
-	t_v2d	tmp;
+	v2d	tmp;
 
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
 }
 
-void			swapv3d(t_v3d *a, t_v3d *b)
+void			swapv3d(v3d *a, v3d *b)
 {
-	t_v3d	tmp;
+	v3d	tmp;
 
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
 }
 
-void			swapv4d(t_v4d *a, t_v4d *b)
+void			swapv4d(v4d *a, v4d *b)
 {
-	t_v4d	tmp;
+	v4d	tmp;
 
 	tmp = *a;
 	*a = *b;

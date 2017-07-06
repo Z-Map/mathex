@@ -12,24 +12,24 @@
 
 #include "mathex/matrix.h"
 
-t_mattd				*pmattd_trans(t_mattd *mat, t_v3d mov)
+mattd				*pmattd_trans(mattd *mat, v3d mov)
 {
 	pv3daddv3d(&(mat->offset), mov);
 	return (mat);
 }
 
-t_mattd				mattd_trans(t_mattd mat, t_v3d mov)
+mattd				mattd_trans(mattd mat, v3d mov)
 {
 	pv3daddv3d(&(mat.offset), mov);
 	return (mat);
 }
 
-t_mattd				nmattd_trans(t_v3d mov)
+mattd				nmattd_trans(v3d mov)
 {
-	return ((t_mattd){
-		(t_v3d){ 1.0, 0.0, 0.0},
-		(t_v3d){ 0.0, 1.0, 0.0},
-		(t_v3d){ 0.0, 0.0, 1.0},
+	return ((mattd){
+		(v3d){ 1.0, 0.0, 0.0},
+		(v3d){ 0.0, 1.0, 0.0},
+		(v3d){ 0.0, 0.0, 1.0},
 		mov,
-		(t_v4d){ 0.0, 0.0, 0.0, 1.0}});
+		(v4d){ 0.0, 0.0, 0.0, 1.0}});
 }

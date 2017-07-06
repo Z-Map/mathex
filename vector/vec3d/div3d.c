@@ -12,12 +12,12 @@
 
 #include "mathex/vector.h"
 
-t_v3d					v3ddivv3d(t_v3d a, t_v3d b)
+v3d					v3ddivv3d(v3d a, v3d b)
 {
-	return ((t_v3d){ a.x / b.x, a.y / b.y, a.z / b.z});
+	return ((v3d){ a.x / b.x, a.y / b.y, a.z / b.z});
 }
 
-t_v3d					*pv3ddivv3d(t_v3d *a, const t_v3d b)
+v3d					*pv3ddivv3d(v3d *a, const v3d b)
 {
 	a->x /= b.x;
 	a->y /= b.y;

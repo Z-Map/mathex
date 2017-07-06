@@ -13,23 +13,23 @@
 #include <math.h>
 #include "mathex/vector.h"
 
-t_v3d				normalized3d(t_v3d v)
+v3d				normalized3d(v3d v)
 {
 	const double	nor = sqrt((v.x * v.x) + (v.y * v.y) + (v.z * v.z));
 
-	return ((t_v3d){v.x / nor, v.y / nor, v.z / nor});
+	return ((v3d){v.x / nor, v.y / nor, v.z / nor});
 }
 
-t_v3d				*normalize3d(t_v3d *v)
+v3d				*normalize3d(v3d *v)
 {
 	const double	nor = sqrt((v->x * v->x) + (v->y * v->y) + (v->z * v->z));
 
-	*v = (t_v3d){v->x / nor, v->y / nor, v->z / nor};
+	*v = (v3d){v->x / nor, v->y / nor, v->z / nor};
 	return (v);
 }
 
-t_v3d				normlen3d(t_v3d v, double *nor)
+v3d				normlen3d(v3d v, double *nor)
 {
 	*nor = sqrt((v.x * v.x) + (v.y * v.y) + (v.z * v.z));
-	return ((t_v3d){v.x / *nor, v.y / *nor, v.z / *nor});
+	return ((v3d){v.x / *nor, v.y / *nor, v.z / *nor});
 }

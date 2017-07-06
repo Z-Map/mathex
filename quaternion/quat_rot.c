@@ -12,26 +12,26 @@
 
 #include "mathex/quaternion.h"
 
-t_quat		quat_rot(t_v3d axis, double rot)
+quat		quat_rot(v3d axis, double rot)
 {
 	double	sa;
 
 	rot *= 0.5;
 	sa = sin(rot);
-	return ((t_quat){
+	return ((quat){
 			.r = cos(rot),
 			.i = axis.x * sa,
 			.j = axis.y * sa,
 			.k = axis.z * sa});
 }
 
-t_quatf		quatf_rot(t_v3f axis, float rot)
+quatf		quatf_rot(v3f axis, float rot)
 {
 	float	sa;
 
 	rot *= 0.5;
 	sa = sinf(rot);
-	return ((t_quatf){
+	return ((quatf){
 			.r = cosf(rot),
 			.i = axis.x * sa,
 			.j = axis.y * sa,

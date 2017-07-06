@@ -12,9 +12,9 @@
 
 #include "mathex/matrix.h"
 
-t_mattf				*pmattf_scale(t_mattf *mat, float size)
+mattf				*pmattf_scale(mattf *mat, float size)
 {
-	const t_v3f		s = nv3f(size);
+	const v3f		s = nv3f(size);
 
 	pv3fmulv3f(&(mat->x), s);
 	pv3fmulv3f(&(mat->y), s);
@@ -22,9 +22,9 @@ t_mattf				*pmattf_scale(t_mattf *mat, float size)
 	return (mat);
 }
 
-t_mattf				mattf_scale(t_mattf mat, float size)
+mattf				mattf_scale(mattf mat, float size)
 {
-	const t_v3f		s = nv3f(size);
+	const v3f		s = nv3f(size);
 
 	pv3fmulv3f(&(mat.x), s);
 	pv3fmulv3f(&(mat.y), s);
@@ -32,12 +32,12 @@ t_mattf				mattf_scale(t_mattf mat, float size)
 	return (mat);
 }
 
-t_mattf				nmattf_scale(float size)
+mattf				nmattf_scale(float size)
 {
-	return ((t_mattf){
-		(t_v3f){ size, 0.0f, 0.0f},
-		(t_v3f){ 0.0f, size, 0.0f},
-		(t_v3f){ 0.0f, 0.0f, size},
-		(t_v3f){ 0.0f, 0.0f, 0.0f},
-		(t_v4f){ 0.0f, 0.0f, 0.0f, 1.0f}});
+	return ((mattf){
+		(v3f){ size, 0.0f, 0.0f},
+		(v3f){ 0.0f, size, 0.0f},
+		(v3f){ 0.0f, 0.0f, size},
+		(v3f){ 0.0f, 0.0f, 0.0f},
+		(v4f){ 0.0f, 0.0f, 0.0f, 1.0f}});
 }

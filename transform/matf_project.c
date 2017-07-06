@@ -12,9 +12,9 @@
 
 #include "mathex/matrix.h"
 
-static inline void	pmattf_vecprod(t_v4f *v, const t_mattf *mat)
+static inline void	pmattf_vecprod(v4f *v, const mattf *mat)
 {
-	*v = (t_v4f){
+	*v = (v4f){
 		(mat->x.x * v->x) + (mat->y.x * v->y) + (mat->z.x * v->z)
 		+ (mat->offset.x * v->w),
 		(mat->x.y * v->x) + (mat->y.y * v->y) + (mat->z.y * v->z)
@@ -26,13 +26,13 @@ static inline void	pmattf_vecprod(t_v4f *v, const t_mattf *mat)
 	};
 }
 
-t_v3f				*pmattf_project(t_v3f *v, const t_mattf *mat)
+v3f				*pmattf_project(v3f *v, const mattf *mat)
 {
-	t_v4f			vec;
+	v4f			vec;
 
-	vec = (t_v4f){v->x, v->y, v->z, 1.0f};
+	vec = (v4f){v->x, v->y, v->z, 1.0f};
 	pmattf_vecprod(&vec, mat);
 	vec.w = (vec.w + 1.0f) / 2.0f;
-	*v = (t_v3f){vec.x / vec.w, vec.y / vec.w, vec.z / vec.w};
+	*v = (v3f){vec.x / vec.w, vec.y / vec.w, vec.z / vec.w};
 	return (v);
 }

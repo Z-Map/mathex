@@ -13,7 +13,7 @@
 #include <math.h>
 #include "mathex/vector.h"
 
-float				len3f(t_v3f v)
+float				len3f(v3f v)
 {
 	return (sqrtf((v.x * v.x) + (v.y * v.y) + (v.z * v.z)));
 }

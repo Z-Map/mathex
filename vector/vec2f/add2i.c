@@ -12,12 +12,12 @@
 
 #include "mathex/vector.h"
 
-t_v2f					v2faddv2i(t_v2f a, t_v2i b)
+v2f					v2faddv2i(v2f a, v2i b)
 {
-	return ((t_v2f){ a.x + (float)b.x, a.y + (float)b.y });
+	return ((v2f){ a.x + (float)b.x, a.y + (float)b.y });
 }
 
-t_v2f					*pv2faddv2i(t_v2f *a, const t_v2i b)
+v2f					*pv2faddv2i(v2f *a, const v2i b)
 {
 	a->x += (float)b.x;
 	a->y += (float)b.y;

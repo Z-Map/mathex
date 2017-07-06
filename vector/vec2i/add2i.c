@@ -12,12 +12,12 @@
 
 #include "mathex/vector.h"
 
-t_v2i					v2iaddv2i(t_v2i a, t_v2i b)
+v2i					v2iaddv2i(v2i a, v2i b)
 {
-	return ((t_v2i){ a.x + b.x, a.y + b.y });
+	return ((v2i){ a.x + b.x, a.y + b.y });
 }
 
-t_v2i					*pv2iaddv2i(t_v2i *a, const t_v2i b)
+v2i					*pv2iaddv2i(v2i *a, const v2i b)
 {
 	a->x += b.x;
 	a->y += b.y;

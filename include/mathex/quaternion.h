@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/24 23:38:10 by qloubier          #+#    #+#             */
-/*   Updated: 2017/07/04 01:58:40 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/07/05 16:55:50 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct		s_quaternion
 	double			i;
 	double			j;
 	double			k;
-}					t_quat;
+}					quat;
 
 typedef struct		s_quaternion_float
 {
@@ -31,24 +31,24 @@ typedef struct		s_quaternion_float
 	float			i;
 	float			j;
 	float			k;
-}					t_quatf;
+}					quatf;
 
-t_quat		quat_identity(void);
-t_quat		quat_mult(t_quat a, t_quat b);
-t_quat		quat_inv(const t_quat q);
-t_quat		quat_rot(t_v3d axis, double rot);
-t_mat4d		quat_tomatrix(const t_quat q);
-t_mattd		quat_totransform(const t_quat q);
-t_mat4d		quat_tomatrix_offset(const t_quat q, const t_v4d offset);
-t_mattd		quat_totransform_offset(const t_quat q, const t_v3d offset);
+quat				quat_identity(void);
+quat				quat_mult(quat a, quat b);
+quat				quat_inv(const quat q);
+quat				quat_rot(v3d axis, double rot);
+mat4d				quat_tomatrix(const quat q);
+mattd				quat_totransform(const quat q);
+mat4d				quat_tomatrix_offset(const quat q, const v4d offset);
+mattd				quat_totransform_offset(const quat q, const v3d offset);
 
-t_quatf		quatf_identity(void);
-t_quatf		quatf_mult(t_quatf a, t_quatf b);
-t_quatf		quatf_inv(const t_quatf q);
-t_quatf		quatf_rot(t_v3f axis, float rot);
-t_mat4f		quatf_tomatrix(const t_quatf q);
-t_mattf		quatf_totransform(const t_quatf q);
-t_mat4f		quatf_tomatrix_offset(const t_quatf q, const t_v4f offset);
-t_mattf		quatf_totransform_offset(const t_quatf q, const t_v3f offset);
+quatf				quatf_identity(void);
+quatf				quatf_mult(quatf a, quatf b);
+quatf				quatf_inv(const quatf q);
+quatf				quatf_rot(v3f axis, float rot);
+mat4f				quatf_tomatrix(const quatf q);
+mattf				quatf_totransform(const quatf q);
+mat4f				quatf_tomatrix_offset(const quatf q, const v4f offset);
+mattf				quatf_totransform_offset(const quatf q, const v3f offset);
 
 #endif

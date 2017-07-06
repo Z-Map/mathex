@@ -12,13 +12,13 @@
 
 #include "mathex/vector.h"
 
-t_v2f					v2fmulv2d(t_v2f a, t_v2d b)
+v2f					v2fmulv2d(v2f a, v2d b)
 {
-	return ((t_v2f){ a.x * (float)(b.x),
+	return ((v2f){ a.x * (float)(b.x),
 		a.y * (float)(b.y)});
 }
 
-t_v2f					*pv2fmulv2d(t_v2f *a, const t_v2d b)
+v2f					*pv2fmulv2d(v2f *a, const v2d b)
 {
 	a->x *= (float)(b.x);
 	a->y *= (float)(b.y);

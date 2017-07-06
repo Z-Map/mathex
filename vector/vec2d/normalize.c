@@ -13,23 +13,23 @@
 #include <math.h>
 #include "mathex/vector.h"
 
-t_v2d				normalized2d(t_v2d v)
+v2d				normalized2d(v2d v)
 {
 	const double	nor = sqrt((v.x * v.x) + (v.y * v.y));
 
-	return ((t_v2d){v.x / nor, v.y / nor});
+	return ((v2d){v.x / nor, v.y / nor});
 }
 
-t_v2d				*normalize2d(t_v2d *v)
+v2d				*normalize2d(v2d *v)
 {
 	const double	nor = sqrt((v->x * v->x) + (v->y * v->y));
 
-	*v = (t_v2d){v->x / nor, v->y / nor};
+	*v = (v2d){v->x / nor, v->y / nor};
 	return (v);
 }
 
-t_v2d				normlen2d(t_v2d v, double *nor)
+v2d				normlen2d(v2d v, double *nor)
 {
 	*nor = sqrt((v.x * v.x) + (v.y * v.y));
-	return ((t_v2d){v.x / *nor, v.y / *nor});
+	return ((v2d){v.x / *nor, v.y / *nor});
 }

@@ -13,12 +13,12 @@
 #include <math.h>
 #include "mathex/vector.h"
 
-float		v3fdotv3f(const t_v3f a, const t_v3f b)
+float		v3fdotv3f(const v3f a, const v3f b)
 {
 	return (a.x * b.x + a.y * b.y + a.z * b.z);
 }
 
-float		v3fdotv3d(const t_v3f a, const t_v3d b)
+float		v3fdotv3d(const v3f a, const v3d b)
 {
 	return (a.x * (float)b.x + a.y * (float)b.y + a.z * (float)b.z);
 }

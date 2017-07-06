@@ -12,12 +12,12 @@
 
 #include "mathex/vector.h"
 
-t_v2i					v2imulv2d(t_v2i a, t_v2d b)
+v2i					v2imulv2d(v2i a, v2d b)
 {
-	return ((t_v2i){ a.x * (int)b.x, a.y * (int)b.y });
+	return ((v2i){ a.x * (int)b.x, a.y * (int)b.y });
 }
 
-t_v2i					*pv2imulv2d(t_v2i *a, const t_v2d b)
+v2i					*pv2imulv2d(v2i *a, const v2d b)
 {
 	a->x *= (int)b.x;
 	a->y *= (int)b.y;

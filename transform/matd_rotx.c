@@ -13,32 +13,32 @@
 #include "mathex/matrix.h"
 #include <math.h>
 
-t_mattd				*pmattd_rotx(t_mattd *mat, double rad)
+mattd				*pmattd_rotx(mattd *mat, double rad)
 {
-	t_mattd			rot;
+	mattd			rot;
 
 	rot = nmattd_rotx(rad);
 	return (pmattd_multiply(mat, &rot));
 }
 
-t_mattd				mattd_rotx(t_mattd mat, double rad)
+mattd				mattd_rotx(mattd mat, double rad)
 {
-	t_mattd			rot;
+	mattd			rot;
 
 	rot = nmattd_rotx(rad);
 	pmattd_multiply(&mat, &rot);
 	return (mat);
 }
 
-t_mattd				nmattd_rotx(double rad)
+mattd				nmattd_rotx(double rad)
 {
 	const double		c = cos(rad);
 	const double		s = sin(rad);
 
-	return ((t_mattd){
-		(t_v3d){ 1.0, 0.0, 0.0},
-		(t_v3d){ 0.0, c, s},
-		(t_v3d){ 0.0, -s, c},
-		(t_v3d){ 0.0, 0.0, 0.0},
-		(t_v4d){ 0.0, 0.0, 0.0, 1.0}});
+	return ((mattd){
+		(v3d){ 1.0, 0.0, 0.0},
+		(v3d){ 0.0, c, s},
+		(v3d){ 0.0, -s, c},
+		(v3d){ 0.0, 0.0, 0.0},
+		(v4d){ 0.0, 0.0, 0.0, 1.0}});
 }

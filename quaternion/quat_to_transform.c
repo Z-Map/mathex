@@ -12,58 +12,58 @@
 
 #include "mathex/quaternion.h"
 
-t_mattd				quat_totransform(const t_quat q)
+mattd				quat_totransform(const quat q)
 {
-	return ((t_mattd){
-		(t_v3d){
+	return ((mattd){
+		(v3d){
 			1.0 - 2.0 * (q.j * q.j + q.k * q.k),
 			2.0 * (q.i * q.j - q.r * q.k),
 			2.0 * (q.r * q.j + q.i * q.k)},
-		(t_v3d){
+		(v3d){
 			2.0 * (q.r * q.k + q.i * q.j),
 			1.0 - 2.0 * (q.i * q.i + q.k * q.k),
 			2.0 * (q.j * q.k - q.r * q.i)},
-		(t_v3d){
+		(v3d){
 			2.0 * (q.i * q.k - q.r * q.j),
 			2.0 * (q.r * q.i + q.j * q.k),
 			1.0 - 2.0 * (q.i * q.i + q.j * q.j)},
-		(t_v3d){0.0, 0.0, 0.0},
-		(t_v4d){0.0, 0.0, 0.0, 1.0}
+		(v3d){0.0, 0.0, 0.0},
+		(v4d){0.0, 0.0, 0.0, 1.0}
 	});
 }
 
-t_mattd				quat_totransform_offset(const t_quat q, const t_v3d offset)
+mattd				quat_totransform_offset(const quat q, const v3d offset)
 {
-	const t_mattd	m = quat_totransform(q);
+	const mattd	m = quat_totransform(q);
 
-	return ((t_mattd){.x = m.x, .y = m.y, .z = m.z,
+	return ((mattd){.x = m.x, .y = m.y, .z = m.z,
 		.offset = offset, .w = m.w });
 }
 
-t_mattf				quatf_totransform(const t_quatf q)
+mattf				quatf_totransform(const quatf q)
 {
-	return ((t_mattf){
-		(t_v3f){
+	return ((mattf){
+		(v3f){
 			1.0f - 2.0f * (q.j * q.j + q.k * q.k),
 			2.0f * (q.i * q.j - q.r * q.k),
 			2.0f * (q.r * q.j + q.i * q.k)},
-		(t_v3f){
+		(v3f){
 			2.0f * (q.r * q.k + q.i * q.j),
 			1.0f - 2.0f * (q.i * q.i + q.k * q.k),
 			2.0f * (q.j * q.k - q.r * q.i)},
-		(t_v3f){
+		(v3f){
 			2.0f * (q.i * q.k - q.r * q.j),
 			2.0f * (q.r * q.i + q.j * q.k),
 			1.0f - 2.0f * (q.i * q.i + q.j * q.j)},
-		(t_v3f){0.0f, 0.0f, 0.0f},
-		(t_v4f){0.0f, 0.0f, 0.0f, 1.0f}
+		(v3f){0.0f, 0.0f, 0.0f},
+		(v4f){0.0f, 0.0f, 0.0f, 1.0f}
 	});
 }
 
-t_mattf				quatf_totransform_offset(const t_quatf q, const t_v3f offset)
+mattf				quatf_totransform_offset(const quatf q, const v3f offset)
 {
-	const t_mattf	m = quatf_totransform(q);
+	const mattf	m = quatf_totransform(q);
 
-	return ((t_mattf){.x = m.x, .y = m.y, .z = m.z,
+	return ((mattf){.x = m.x, .y = m.y, .z = m.z,
 		.offset = offset, .w = m.w});
 }

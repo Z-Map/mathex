@@ -12,14 +12,14 @@
 
 #include "mathex/vector.h"
 
-t_v3f					v3fmulv3d(t_v3f a, t_v3d b)
+v3f					v3fmulv3d(v3f a, v3d b)
 {
-	return ((t_v3f){ a.x * (float)(b.x),
+	return ((v3f){ a.x * (float)(b.x),
 		a.y * (float)(b.y),
 		a.z * (float)(b.z)});
 }
 
-t_v3f					*pv3fmulv3d(t_v3f *a, const t_v3d b)
+v3f					*pv3fmulv3d(v3f *a, const v3d b)
 {
 	a->x *= (float)(b.x);
 	a->y *= (float)(b.y);

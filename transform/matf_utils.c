@@ -13,55 +13,55 @@
 #include "mathex/matrix.h"
 #include <math.h>
 
-t_mattf				mattf_identity(void)
+mattf				mattf_identity(void)
 {
-	return ((t_mattf){
-		(t_v3f){ 1.0f, 0.0f, 0.0f},
-		(t_v3f){ 0.0f, 1.0f, 0.0f},
-		(t_v3f){ 0.0f, 0.0f, 1.0f},
-		(t_v3f){ 0.0f, 0.0f, 0.0f},
-		(t_v4f){ 0.0f, 0.0f, 0.0f, 1.0f}});
+	return ((mattf){
+		(v3f){ 1.0f, 0.0f, 0.0f},
+		(v3f){ 0.0f, 1.0f, 0.0f},
+		(v3f){ 0.0f, 0.0f, 1.0f},
+		(v3f){ 0.0f, 0.0f, 0.0f},
+		(v4f){ 0.0f, 0.0f, 0.0f, 1.0f}});
 }
 
-t_mattf				mattf_perspective(float fov, float ratio, t_v2f clip)
+mattf				mattf_perspective(float fov, float ratio, v2f clip)
 {
 	fov = tanf(fov / 2.0f);
-	return ((t_mattf){
-		(t_v3f){ 1.0f / (fov * ratio), 0.0f, 0.0f},
-		(t_v3f){ 0.0f, 1 / fov, 0.0f},
-		(t_v3f){ 0.0f, 0.0f, ((clip.x + clip.y) / (clip.y - clip.x))},
-		(t_v3f){ 0.0f, 0.0f, (-(2 * clip.x * clip.y) / (clip.y - clip.x))},
-		(t_v4f){ 0.0f, 0.0f, 1.0f, 0.0f}});
+	return ((mattf){
+		(v3f){ 1.0f / (fov * ratio), 0.0f, 0.0f},
+		(v3f){ 0.0f, 1 / fov, 0.0f},
+		(v3f){ 0.0f, 0.0f, ((clip.x + clip.y) / (clip.y - clip.x))},
+		(v3f){ 0.0f, 0.0f, (-(2 * clip.x * clip.y) / (clip.y - clip.x))},
+		(v4f){ 0.0f, 0.0f, 1.0f, 0.0f}});
 }
 
-t_mattf				mattf_ortho(int w, int h, float zoom, float limit)
+mattf				mattf_ortho(int w, int h, float zoom, float limit)
 {
 	if (!(*(unsigned int *)(&zoom) & 0x7fffffff))
 		zoom = 0.00001f;
-	return ((t_mattf){
-		(t_v3f){ (float)w / zoom, 0.0f, 0.0f},
-		(t_v3f){ 0.0f, (float)h / zoom, 0.0f},
-		(t_v3f){ 0.0f, 0.0f, (-2 / (limit - 0.0001f))},
-		(t_v3f){ -(float)h * 0.5f, -(float)h * 0.5f,
+	return ((mattf){
+		(v3f){ (float)w / zoom, 0.0f, 0.0f},
+		(v3f){ 0.0f, (float)h / zoom, 0.0f},
+		(v3f){ 0.0f, 0.0f, (-2 / (limit - 0.0001f))},
+		(v3f){ -(float)h * 0.5f, -(float)h * 0.5f,
 			-((limit + 0.0001f) / (limit - 0.0001f))},
-		(t_v4f){ 0.0f, 0.0f, 0.0f, 1.0f}});
+		(v4f){ 0.0f, 0.0f, 0.0f, 1.0f}});
 }
 
-t_mattf				mattf_iso(void)
+mattf				mattf_iso(void)
 {
-	return ((t_mattf){
-		(t_v3f){ 0.70710678118655f, 0.40824829046386f, 0.0f},
-		(t_v3f){ -0.70710678118655f, 0.40824829046386f, 0.0f},
-		(t_v3f){ 0.0f, -0.816496580927728f, 0.0f},
-		(t_v3f){ 0.0f, 0.0f, 0.0f},
-		(t_v4f){ 0.0f, 0.0f, 0.0f, 1.0f}});
+	return ((mattf){
+		(v3f){ 0.70710678118655f, 0.40824829046386f, 0.0f},
+		(v3f){ -0.70710678118655f, 0.40824829046386f, 0.0f},
+		(v3f){ 0.0f, -0.816496580927728f, 0.0f},
+		(v3f){ 0.0f, 0.0f, 0.0f},
+		(v4f){ 0.0f, 0.0f, 0.0f, 1.0f}});
 }
 
-t_mat4f				mattf_togl(const t_mattf m)
+mat4f				mattf_togl(const mattf m)
 {
-	return ((t_mat4f){
-		(t_v4f){m.x.x, m.y.x, m.z.x, m.offset.x},
-		(t_v4f){m.x.y, m.y.y, m.z.y, m.offset.y},
-		(t_v4f){m.x.z, m.y.z, m.z.z, m.offset.z},
-		(t_v4f){m.w.x, m.w.y, m.w.z, m.w.w}});
+	return ((mat4f){
+		(v4f){m.x.x, m.y.x, m.z.x, m.offset.x},
+		(v4f){m.x.y, m.y.y, m.z.y, m.offset.y},
+		(v4f){m.x.z, m.y.z, m.z.z, m.offset.z},
+		(v4f){m.w.x, m.w.y, m.w.z, m.w.w}});
 }

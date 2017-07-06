@@ -12,17 +12,17 @@
 
 #include "mathex/vector.h"
 
-t_v3i					nv3i(int i)
+v3i					nv3i(int i)
 {
-	return ((t_v3i){i, i, i});
+	return ((v3i){i, i, i});
 }
 
-t_v3i					v2to3i(t_v2i vec)
+v3i					v2to3i(v2i vec)
 {
-	return ((t_v3i){vec.x, vec.y, 0});
+	return ((v3i){vec.x, vec.y, 0});
 }
 
-t_v3i					v4to3i(t_v4i vec)
+v3i					v4to3i(v4i vec)
 {
-	return ((t_v3i){vec.x, vec.y, vec.z});
+	return ((v3i){vec.x, vec.y, vec.z});
 }

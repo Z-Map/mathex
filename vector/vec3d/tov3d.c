@@ -12,17 +12,17 @@
 
 #include "mathex/vector.h"
 
-t_v3d					nv3d(double i)
+v3d					nv3d(double i)
 {
-	return ((t_v3d){i, i, i});
+	return ((v3d){i, i, i});
 }
 
-t_v3d					v2to3d(t_v2d vec)
+v3d					v2to3d(v2d vec)
 {
-	return ((t_v3d){vec.x, vec.y, 0.0});
+	return ((v3d){vec.x, vec.y, 0.0});
 }
 
-t_v3d					v4to3d(t_v4d vec)
+v3d					v4to3d(v4d vec)
 {
-	return ((t_v3d){vec.x, vec.y, vec.z});
+	return ((v3d){vec.x, vec.y, vec.z});
 }

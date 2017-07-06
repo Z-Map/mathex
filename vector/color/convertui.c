@@ -13,7 +13,7 @@
 #include "mathex/utils.h"
 #include "mathex/color.h"
 
-unsigned int		v4ftoui(t_v4f vcol)
+unsigned int		v4ftoui(v4f vcol)
 {
 	unsigned int	col;
 
@@ -24,7 +24,7 @@ unsigned int		v4ftoui(t_v4f vcol)
 	return (col);
 }
 
-unsigned int		v3ftoui(t_v3f vcol)
+unsigned int		v3ftoui(v3f vcol)
 {
 	unsigned int	col;
 

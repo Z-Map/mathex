@@ -12,12 +12,12 @@
 
 #include "mathex/quaternion.h"
 
-t_quat		quat_identity(void)
+quat		quat_identity(void)
 {
-	return ((t_quat){.r = 1.0, .i = 0.0, .j = 0.0, .k = 0.0});
+	return ((quat){.r = 1.0, .i = 0.0, .j = 0.0, .k = 0.0});
 }
 
-t_quatf		quatf_identity(void)
+quatf		quatf_identity(void)
 {
-	return ((t_quatf){.r = 1.0, .i = 0.0, .j = 0.0, .k = 0.0});
+	return ((quatf){.r = 1.0, .i = 0.0, .j = 0.0, .k = 0.0});
 }

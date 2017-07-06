@@ -12,7 +12,7 @@
 
 #include "mathex/matrix.h"
 
-t_mattf				*pmattf_scalv(t_mattf *mat, t_v3f sizev)
+mattf				*pmattf_scalv(mattf *mat, v3f sizev)
 {
 	pv3fmulv3f(&(mat->x), sizev);
 	pv3fmulv3f(&(mat->y), sizev);
@@ -20,7 +20,7 @@ t_mattf				*pmattf_scalv(t_mattf *mat, t_v3f sizev)
 	return (mat);
 }
 
-t_mattf				mattf_scalv(t_mattf mat, t_v3f sizev)
+mattf				mattf_scalv(mattf mat, v3f sizev)
 {
 	pv3fmulv3f(&(mat.x), sizev);
 	pv3fmulv3f(&(mat.y), sizev);
@@ -28,12 +28,12 @@ t_mattf				mattf_scalv(t_mattf mat, t_v3f sizev)
 	return (mat);
 }
 
-t_mattf				nmattf_scalv(t_v3f sizev)
+mattf				nmattf_scalv(v3f sizev)
 {
-	return ((t_mattf){
-		(t_v3f){ sizev.x, 0.0f, 0.0f},
-		(t_v3f){ 0.0f, sizev.y, 0.0f},
-		(t_v3f){ 0.0f, 0.0f, sizev.z},
-		(t_v3f){ 0.0f, 0.0f, 0.0f},
-		(t_v4f){ 0.0f, 0.0f, 0.0f, 1.0f}});
+	return ((mattf){
+		(v3f){ sizev.x, 0.0f, 0.0f},
+		(v3f){ 0.0f, sizev.y, 0.0f},
+		(v3f){ 0.0f, 0.0f, sizev.z},
+		(v3f){ 0.0f, 0.0f, 0.0f},
+		(v4f){ 0.0f, 0.0f, 0.0f, 1.0f}});
 }

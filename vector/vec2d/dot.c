@@ -13,12 +13,12 @@
 #include <math.h>
 #include "mathex/vector.h"
 
-double		v2ddotv2d(const t_v2d a, const t_v2d b)
+double		v2ddotv2d(const v2d a, const v2d b)
 {
 	return (a.x * b.x + a.y * b.y);
 }
 
-double		v2ddotv2f(const t_v2d a, const t_v2f b)
+double		v2ddotv2f(const v2d a, const v2f b)
 {
 	return (a.x * (double)b.x + a.y * (double)b.y);
 }

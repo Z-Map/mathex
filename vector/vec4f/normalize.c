@@ -13,25 +13,25 @@
 #include <math.h>
 #include "mathex/vector.h"
 
-t_v4f				normalized4f(t_v4f v)
+v4f				normalized4f(v4f v)
 {
 	const float		nor = sqrtf((v.x * v.x) + (v.y * v.y) + (v.z * v.z)
 		+ (v.w * v.w));
 
-	return ((t_v4f){v.x / nor, v.y / nor, v.z / nor, v.w / nor});
+	return ((v4f){v.x / nor, v.y / nor, v.z / nor, v.w / nor});
 }
 
-t_v4f				*normalize4f(t_v4f *v)
+v4f				*normalize4f(v4f *v)
 {
 	const float		nor = sqrtf((v->x * v->x) + (v->y * v->y) + (v->z * v->z)
 		+ (v->w * v->w));
 
-	*v = (t_v4f){v->x / nor, v->y / nor, v->z / nor, v->w / nor};
+	*v = (v4f){v->x / nor, v->y / nor, v->z / nor, v->w / nor};
 	return (v);
 }
 
-t_v4f				normlen4f(t_v4f v, float *nor)
+v4f				normlen4f(v4f v, float *nor)
 {
 	*nor = sqrtf((v.x * v.x) + (v.y * v.y) + (v.z * v.z) + (v.w * v.w));
-	return ((t_v4f){v.x / *nor, v.y / *nor, v.z / *nor, v.w / *nor});
+	return ((v4f){v.x / *nor, v.y / *nor, v.z / *nor, v.w / *nor});
 }

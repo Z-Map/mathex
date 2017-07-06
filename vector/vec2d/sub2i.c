@@ -12,12 +12,12 @@
 
 #include "mathex/vector.h"
 
-t_v2d					v2dsubv2i(t_v2d a, t_v2i b)
+v2d					v2dsubv2i(v2d a, v2i b)
 {
-	return ((t_v2d){ a.x - (double)b.x, a.y - (double)b.y });
+	return ((v2d){ a.x - (double)b.x, a.y - (double)b.y });
 }
 
-t_v2d					*pv2dsubv2i(t_v2d *a, const t_v2i b)
+v2d					*pv2dsubv2i(v2d *a, const v2i b)
 {
 	a->x -= (double)b.x;
 	a->y -= (double)b.y;

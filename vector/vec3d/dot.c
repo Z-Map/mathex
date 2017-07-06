@@ -13,12 +13,12 @@
 #include <math.h>
 #include "mathex/vector.h"
 
-double		v3ddotv3d(const t_v3d a, const t_v3d b)
+double		v3ddotv3d(const v3d a, const v3d b)
 {
 	return (a.x * b.x + a.y * b.y + a.z * b.z);
 }
 
-double		v3ddotv3f(const t_v3d a, const t_v3f b)
+double		v3ddotv3f(const v3d a, const v3f b)
 {
 	return (a.x * (double)b.x + a.y * (double)b.y + a.z * (double)b.z);
 }

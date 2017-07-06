@@ -13,35 +13,35 @@
 #include "mathex/matrix.h"
 #include <math.h>
 
-t_mattd				*pmattd_rot(t_mattd *mat, t_v3d vrad)
+mattd				*pmattd_rot(mattd *mat, v3d vrad)
 {
-	t_mattd			rot;
+	mattd			rot;
 
 	rot = nmattd_rot(vrad);
 	return (pmattd_multiply(mat, &rot));
 }
 
-t_mattd				mattd_rot(t_mattd mat, t_v3d vrad)
+mattd				mattd_rot(mattd mat, v3d vrad)
 {
-	t_mattd			rot;
+	mattd			rot;
 
 	rot = nmattd_rot(vrad);
 	pmattd_multiply(&mat, &rot);
 	return (mat);
 }
 
-t_mattd				nmattd_rot(t_v3d vrad)
+mattd				nmattd_rot(v3d vrad)
 {
-	const t_v3d		c = (t_v3d){cos(vrad.x), cos(vrad.y), cos(vrad.z)};
-	const t_v3d		s = (t_v3d){sin(vrad.x), sin(vrad.y), sin(vrad.z)};
+	const v3d		c = (v3d){cos(vrad.x), cos(vrad.y), cos(vrad.z)};
+	const v3d		s = (v3d){sin(vrad.x), sin(vrad.y), sin(vrad.z)};
 	const double	sxsz = s.x * s.z;
 	const double	sycz = s.y * c.z;
 
-	return ((t_mattd){
-		(t_v3d){ (c.y * c.z) - (s.y * sxsz), -s.z * c.x, sycz + (c.y * sxsz)},
-		(t_v3d){ (s.z * c.y) + (s.y * s.x * c.z), c.z * c.x,
+	return ((mattd){
+		(v3d){ (c.y * c.z) - (s.y * sxsz), -s.z * c.x, sycz + (c.y * sxsz)},
+		(v3d){ (s.z * c.y) + (s.y * s.x * c.z), c.z * c.x,
 			(s.y * s.z) - (c.y * s.x * c.z)},
-			(t_v3d){ -s.y * c.x, s.x, c.x * c.y},
-			(t_v3d){ 0.0, 0.0, 0.0},
-			(t_v4d){ 0.0, 0.0, 0.0, 1.0}});
+			(v3d){ -s.y * c.x, s.x, c.x * c.y},
+			(v3d){ 0.0, 0.0, 0.0},
+			(v4d){ 0.0, 0.0, 0.0, 1.0}});
 }

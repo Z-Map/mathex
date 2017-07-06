@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2017/05/25 13:28:22 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/07/05 16:42:57 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,281 +17,281 @@
 
 typedef	struct		s_int_matrix_2d
 {
-	t_v2i			x;
-	t_v2i			y;
-}					t_mat2i;
+	v2i				x;
+	v2i				y;
+}					mat2i;
 
 typedef	struct		s_int_matrix_2x3d
 {
-	t_v3i			x;
-	t_v3i			y;
-}					t_mat2x3i;
+	v3i				x;
+	v3i				y;
+}					mat2x3i;
 
 typedef	struct		s_int_matrix_3x2d
 {
-	t_v2i			x;
-	t_v2i			y;
-	t_v2i			z;
-}					t_mat3x2i;
+	v2i				x;
+	v2i				y;
+	v2i				z;
+}					mat3x2i;
 
 typedef	struct		s_int_matrix_3d
 {
-	t_v3i			x;
-	t_v3i			y;
-	t_v3i			z;
-}					t_mat3i;
+	v3i				x;
+	v3i				y;
+	v3i				z;
+}					mat3i;
 
 typedef	struct		s_int_matrix_3x4d
 {
-	t_v4i			x;
-	t_v4i			y;
-	t_v4i			z;
-}					t_mat3x4i;
+	v4i				x;
+	v4i				y;
+	v4i				z;
+}					mat3x4i;
 
 typedef	struct		s_int_matrix_4d
 {
-	t_v4i			x;
-	t_v4i			y;
-	t_v4i			z;
-	t_v4i			w;
-}					t_mat4i;
+	v4i				x;
+	v4i				y;
+	v4i				z;
+	v4i				w;
+}					mat4i;
 
 typedef	struct		s_uint_matrix_2d
 {
-	t_v2ui			x;
-	t_v2ui			y;
-}					t_mat2ui;
+	v2ui			x;
+	v2ui			y;
+}					mat2ui;
 
 typedef	struct		s_uint_matrix_2x3d
 {
-	t_v3ui			x;
-	t_v3ui			y;
-}					t_mat2x3ui;
+	v3ui			x;
+	v3ui			y;
+}					mat2x3ui;
 
 typedef	struct		s_uint_matrix_3x2d
 {
-	t_v2ui			x;
-	t_v2ui			y;
-	t_v2ui			z;
-}					t_mat3x2ui;
+	v2ui			x;
+	v2ui			y;
+	v2ui			z;
+}					mat3x2ui;
 
 typedef	struct		s_uint_matrix_3d
 {
-	t_v3ui			x;
-	t_v3ui			y;
-	t_v3ui			z;
-}					t_mat3ui;
+	v3ui			x;
+	v3ui			y;
+	v3ui			z;
+}					mat3ui;
 
 typedef	struct		s_uint_matrix_3x4d
 {
-	t_v4ui			x;
-	t_v4ui			y;
-	t_v4ui			z;
-}					t_mat3x4ui;
+	v4ui			x;
+	v4ui			y;
+	v4ui			z;
+}					mat3x4ui;
 
 typedef	struct		s_uint_matrix_4d
 {
-	t_v4ui			x;
-	t_v4ui			y;
-	t_v4ui			z;
-	t_v4ui			w;
-}					t_mat4ui;
+	v4ui			x;
+	v4ui			y;
+	v4ui			z;
+	v4ui			w;
+}					mat4ui;
 
 typedef	struct		s_float_matrix_2d
 {
-	t_v2f			x;
-	t_v2f			y;
-}					t_mat2f;
+	v2f				x;
+	v2f				y;
+}					mat2f;
 
 typedef	struct		s_float_matrix_2x3d
 {
-	t_v3f			x;
-	t_v3f			y;
-}					t_mat2x3f;
+	v3f				x;
+	v3f				y;
+}					mat2x3f;
 
 typedef	struct		s_float_matrix_3x2d
 {
-	t_v2f			x;
-	t_v2f			y;
-	t_v2f			z;
-}					t_mat3x2f;
+	v2f				x;
+	v2f				y;
+	v2f				z;
+}					mat3x2f;
 
 typedef	struct		s_float_matrix_3d
 {
-	t_v3f			x;
-	t_v3f			y;
-	t_v3f			z;
-}					t_mat3f;
+	v3f				x;
+	v3f				y;
+	v3f				z;
+}					mat3f;
 
 typedef	struct		s_float_matrix_3x4d
 {
-	t_v4f			x;
-	t_v4f			y;
-	t_v4f			z;
-}					t_mat3x4f;
+	v4f				x;
+	v4f				y;
+	v4f				z;
+}					mat3x4f;
 
 typedef	struct		s_float_matrix_4d
 {
-	t_v4f			x;
-	t_v4f			y;
-	t_v4f			z;
-	t_v4f			w;
-}					t_mat4f;
+	v4f				x;
+	v4f				y;
+	v4f				z;
+	v4f				w;
+}					mat4f;
 
 typedef	struct		s_double_matrix_2d
 {
-	t_v2d			x;
-	t_v2d			y;
-}					t_mat2d;
+	v2d				x;
+	v2d				y;
+}					mat2d;
 
 typedef	struct		s_double_matrix_2x3d
 {
-	t_v3d			x;
-	t_v3d			y;
-}					t_mat2x3d;
+	v3d				x;
+	v3d				y;
+}					mat2x3d;
 
 typedef	struct		s_double_matrix_3x2d
 {
-	t_v2d			x;
-	t_v2d			y;
-	t_v2d			z;
-}					t_mat3x2d;
+	v2d				x;
+	v2d				y;
+	v2d				z;
+}					mat3x2d;
 
 typedef	struct		s_double_matrix_3d
 {
-	t_v3d			x;
-	t_v3d			y;
-	t_v3d			z;
-}					t_mat3d;
+	v3d				x;
+	v3d				y;
+	v3d				z;
+}					mat3d;
 
 typedef	struct		s_double_matrix_3x4d
 {
-	t_v4d			x;
-	t_v4d			y;
-	t_v4d			z;
-}					t_mat3x4d;
+	v4d				x;
+	v4d				y;
+	v4d				z;
+}					mat3x4d;
 
 typedef	struct		s_double_matrix_4d
 {
-	t_v4d			x;
-	t_v4d			y;
-	t_v4d			z;
-	t_v4d			w;
-}					t_mat4d;
+	v4d				x;
+	v4d				y;
+	v4d				z;
+	v4d				w;
+}					mat4d;
 
 typedef	struct		s_float_matrix_transform
 {
-	t_v3f			x;
-	t_v3f			y;
-	t_v3f			z;
-	t_v3f			offset;
-	t_v4f			w;
-}					t_mattf;
+	v3f				x;
+	v3f				y;
+	v3f				z;
+	v3f				offset;
+	v4f				w;
+}					mattf;
 
 typedef	struct		s_double_matrix_transform
 {
-	t_v3d			x;
-	t_v3d			y;
-	t_v3d			z;
-	t_v3d			offset;
-	t_v4d			w;
-}					t_mattd;
+	v3d				x;
+	v3d				y;
+	v3d				z;
+	v3d				offset;
+	v4d				w;
+}					mattd;
 
 /*
 **	Single precision matrix function
 */
 
-t_mattf				*pmattf_trans(t_mattf *mat, t_v3f mov);
-t_mattf				mattf_trans(t_mattf mat, t_v3f mov);
-t_mattf				nmattf_trans(t_v3f mov);
+mattf				*pmattf_trans(mattf *mat, v3f mov);
+mattf				mattf_trans(mattf mat, v3f mov);
+mattf				nmattf_trans(v3f mov);
 
-t_mattf				*pmattf_scale(t_mattf *mat, float size);
-t_mattf				mattf_scale(t_mattf mat, float size);
-t_mattf				nmattf_scale(float size);
-t_mattf				*pmattf_scalv(t_mattf *mat, t_v3f sizev);
-t_mattf				mattf_scalv(t_mattf mat, t_v3f sizev);
-t_mattf				nmattf_scalv(t_v3f sizev);
+mattf				*pmattf_scale(mattf *mat, float size);
+mattf				mattf_scale(mattf mat, float size);
+mattf				nmattf_scale(float size);
+mattf				*pmattf_scalv(mattf *mat, v3f sizev);
+mattf				mattf_scalv(mattf mat, v3f sizev);
+mattf				nmattf_scalv(v3f sizev);
 
-t_mattf				*pmattf_rotx(t_mattf *mat, float rad);
-t_mattf				mattf_rotx(t_mattf mat, float rad);
-t_mattf				nmattf_rotx(float rad);
-t_mattf				*pmattf_roty(t_mattf *mat, float rad);
-t_mattf				mattf_roty(t_mattf mat, float rad);
-t_mattf				nmattf_roty(float rad);
-t_mattf				*pmattf_rotz(t_mattf *mat, float rad);
-t_mattf				mattf_rotz(t_mattf mat, float rad);
-t_mattf				nmattf_rotz(float rad);
+mattf				*pmattf_rotx(mattf *mat, float rad);
+mattf				mattf_rotx(mattf mat, float rad);
+mattf				nmattf_rotx(float rad);
+mattf				*pmattf_roty(mattf *mat, float rad);
+mattf				mattf_roty(mattf mat, float rad);
+mattf				nmattf_roty(float rad);
+mattf				*pmattf_rotz(mattf *mat, float rad);
+mattf				mattf_rotz(mattf mat, float rad);
+mattf				nmattf_rotz(float rad);
 
-t_mattf				*pmattf_rot(t_mattf *mat, t_v3f vrad);
-t_mattf				mattf_rot(t_mattf mat, t_v3f vrad);
-t_mattf				nmattf_rot(t_v3f vrad);
+mattf				*pmattf_rot(mattf *mat, v3f vrad);
+mattf				mattf_rot(mattf mat, v3f vrad);
+mattf				nmattf_rot(v3f vrad);
 
-t_mattf				*ptransformf(t_mattf *mat, t_v3f m, t_v3f r, t_v3f s);
-t_mattf				transformf(t_mattf mat, t_v3f m, t_v3f r, t_v3f s);
-t_mattf				ntransformf(t_v3f mov, t_v3f rot, t_v3f sca);
+mattf				*ptransformf(mattf *mat, v3f m, v3f r, v3f s);
+mattf				transformf(mattf mat, v3f m, v3f r, v3f s);
+mattf				ntransformf(v3f mov, v3f rot, v3f sca);
 
-t_v3f				*pmattf_apply(t_v3f *v, const t_mattf *mat);
-t_v3f				mattf_apply(t_v3f v, t_mattf mat);
-t_v3f				*pmattf_project(t_v3f *v, const t_mattf *mat);
+v3f					*pmattf_apply(v3f *v, const mattf *mat);
+v3f					mattf_apply(v3f v, mattf mat);
+v3f					*pmattf_project(v3f *v, const mattf *mat);
 
-t_mattf				*pmattf_multiply(t_mattf *dest, const t_mattf *mat);
-t_mattf				mattf_multiply(t_mattf mat1, t_mattf mat2);
-t_mattf				*pmattf_invert(t_mattf *mat);
-t_mattf				mattf_invert(const t_mattf *mat);
+mattf				*pmattf_multiply(mattf *dest, const mattf *mat);
+mattf				mattf_multiply(mattf mat1, mattf mat2);
+mattf				*pmattf_invert(mattf *mat);
+mattf				mattf_invert(const mattf *mat);
 
-t_mattf				mattf_identity(void);
-t_mattf				mattf_perspective(float fov, float ratio, t_v2f clip);
-t_mattf				mattf_ortho(int w, int h, float zoom, float limit);
-t_mattf				mattf_iso(void);
+mattf				mattf_identity(void);
+mattf				mattf_perspective(float fov, float ratio, v2f clip);
+mattf				mattf_ortho(int w, int h, float zoom, float limit);
+mattf				mattf_iso(void);
 
-t_mat4f				mattf_togl(const t_mattf m);
+mat4f				mattf_togl(const mattf m);
 
 /*
 **	Double precision matrix function
 */
 
-t_mattd				*pmattd_trans(t_mattd *mat, t_v3d mov);
-t_mattd				mattd_trans(t_mattd mat, t_v3d mov);
-t_mattd				nmattd_trans(t_v3d mov);
+mattd				*pmattd_trans(mattd *mat, v3d mov);
+mattd				mattd_trans(mattd mat, v3d mov);
+mattd				nmattd_trans(v3d mov);
 
-t_mattd				*pmattd_scale(t_mattd *mat, double size);
-t_mattd				mattd_scale(t_mattd mat, double size);
-t_mattd				nmattd_scale(double size);
-t_mattd				*pmattd_scalv(t_mattd *mat, t_v3d sizev);
-t_mattd				mattd_scalv(t_mattd mat, t_v3d sizev);
-t_mattd				nmattd_scalv(t_v3d sizev);
+mattd				*pmattd_scale(mattd *mat, double size);
+mattd				mattd_scale(mattd mat, double size);
+mattd				nmattd_scale(double size);
+mattd				*pmattd_scalv(mattd *mat, v3d sizev);
+mattd				mattd_scalv(mattd mat, v3d sizev);
+mattd				nmattd_scalv(v3d sizev);
 
-t_mattd				*pmattd_rotx(t_mattd *mat, double rad);
-t_mattd				mattd_rotx(t_mattd mat, double rad);
-t_mattd				nmattd_rotx(double rad);
-t_mattd				*pmattd_roty(t_mattd *mat, double rad);
-t_mattd				mattd_roty(t_mattd mat, double rad);
-t_mattd				nmattd_roty(double rad);
-t_mattd				*pmattd_rotz(t_mattd *mat, double rad);
-t_mattd				mattd_rotz(t_mattd mat, double rad);
-t_mattd				nmattd_rotz(double rad);
+mattd				*pmattd_rotx(mattd *mat, double rad);
+mattd				mattd_rotx(mattd mat, double rad);
+mattd				nmattd_rotx(double rad);
+mattd				*pmattd_roty(mattd *mat, double rad);
+mattd				mattd_roty(mattd mat, double rad);
+mattd				nmattd_roty(double rad);
+mattd				*pmattd_rotz(mattd *mat, double rad);
+mattd				mattd_rotz(mattd mat, double rad);
+mattd				nmattd_rotz(double rad);
 
-t_mattd				*pmattd_rot(t_mattd *mat, t_v3d vrad);
-t_mattd				mattd_rot(t_mattd mat, t_v3d vrad);
-t_mattd				nmattd_rot(t_v3d vrad);
+mattd				*pmattd_rot(mattd *mat, v3d vrad);
+mattd				mattd_rot(mattd mat, v3d vrad);
+mattd				nmattd_rot(v3d vrad);
 
-t_mattd				*ptransformd(t_mattd *mat, t_v3d m, t_v3d r, t_v3d s);
-t_mattd				transformd(t_mattd mat, t_v3d m, t_v3d r, t_v3d s);
-t_mattd				ntransformd(t_v3d mov, t_v3d rot, t_v3d sca);
+mattd				*ptransformd(mattd *mat, v3d m, v3d r, v3d s);
+mattd				transformd(mattd mat, v3d m, v3d r, v3d s);
+mattd				ntransformd(v3d mov, v3d rot, v3d sca);
 
-t_v3d				*pmattd_apply(t_v3d *v, const t_mattd *mat);
-t_v3d				mattd_apply(t_v3d v, t_mattd mat);
+v3d					*pmattd_apply(v3d *v, const mattd *mat);
+v3d					mattd_apply(v3d v, mattd mat);
 
-t_mattd				*pmattd_multiply(t_mattd *dest, const t_mattd *mat);
-t_mattd				mattd_multiply(t_mattd mat1, t_mattd mat2);
-t_mattd				*pmattd_invert(t_mattd *mat);
-t_mattd				mattd_invert(const t_mattd *mat);
+mattd				*pmattd_multiply(mattd *dest, const mattd *mat);
+mattd				mattd_multiply(mattd mat1, mattd mat2);
+mattd				*pmattd_invert(mattd *mat);
+mattd				mattd_invert(const mattd *mat);
 
-t_mattd				mattd_identity(void);
-t_mattd				mattd_perspective(double fov, double ratio, t_v2d clip);
-t_mattd				mattd_ortho(int w, int h, double zoom, double limit);
-t_mattd				mattd_iso(void);
+mattd				mattd_identity(void);
+mattd				mattd_perspective(double fov, double ratio, v2d clip);
+mattd				mattd_ortho(int w, int h, double zoom, double limit);
+mattd				mattd_iso(void);
 
-t_mat4d				mattd_togl(const t_mattd m);
+mat4d				mattd_togl(const mattd m);
 
 #endif
