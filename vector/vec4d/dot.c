@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tov4f.c                                            :+:      :+:    :+:   */
+/*   dot.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/21 01:29:16 by qloubier          #+#    #+#             */
-/*   Updated: 2017/07/06 16:42:57 by qloubier         ###   ########.fr       */
+/*   Created: 2017/06/02 20:41:32 by qloubier          #+#    #+#             */
+/*   Updated: 2017/07/07 09:22:57 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <math.h>
 #include "mathex/vector.h"
 
-v4f					nv4f(float i)
+double		v4ddotv4f(const v4d a, const v4f b)
 {
-	return ((v4f){i, i, i, i});
+	return (a.x * (double)b.x + a.y * (double)b.y + a.z * (double)b.z
+		+ a.w * (double)b.w);
 }
 
-v4f					v2to4f(v2f vec)
+double		v4ddotv4d(const v4d a, const v4d b)
 {
-	return ((v4f){vec.x, vec.y, 0.0f, 0.0f});
-}
-
-v4f					v3to4f(v3f vec)
-{
-	return ((v4f){vec.x, vec.y, vec.z, 0.0f});
+	return (a.x * b.x + a.y * b.y + a.z * b.z + a.w * b.w);
 }

@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/28 03:13:40 by qloubier          #+#    #+#             */
-/*   Updated: 2017/07/05 16:42:55 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/07/07 09:22:53 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,6 +182,9 @@ v2i					*pv2idivv2i(v2i *a, const v2i b);
 v2i					*pv2idivv2f(v2i *a, const v2f b);
 v2i					*pv2idivv2d(v2i *a, const v2d b);
 
+v2i					inv2i(v2i a);
+v2i					*invp2i(v2i *a);
+
 /*
 ** v2f tool
 */
@@ -220,6 +223,9 @@ v2f					normlen2f(v2f v, float *nor);
 
 float				v2fdotv2f(const v2f a, const v2f b);
 float				v2fdotv2d(const v2f a, const v2d b);
+
+v2f					inv2f(v2f a);
+v2f					*invp2f(v2f *a);
 
 /*
 ** v2d tool
@@ -260,6 +266,9 @@ v2d					normlen2d(v2d v, double *nor);
 double				v2ddotv2d(const v2d a, const v2d b);
 double				v2ddotv2f(const v2d a, const v2f b);
 
+v2d					inv2d(v2d a);
+v2d					*invp2d(v2d *a);
+
 /*
 ** v3i tool
 */
@@ -291,6 +300,9 @@ v3i					v3idivv3d(v3i a, v3d b);
 v3i					*pv3idivv3i(v3i *a, const v3i b);
 v3i					*pv3idivv3f(v3i *a, const v3f b);
 v3i					*pv3idivv3d(v3i *a, const v3d b);
+
+v3i					inv3i(v3i a);
+v3i					*invp3i(v3i *a);
 
 /*
 ** v3f tool
@@ -342,6 +354,9 @@ v3f					v3fcrossv3d(const v3f a, const v3d b);
 v3f					*pv3fcrossv3f(v3f *v, const v3f b);
 v3f					*pv3fcrossv3d(v3f *v, const v3d b);
 
+v3f					inv3f(v3f a);
+v3f					*invp3f(v3f *a);
+
 /*
 ** v3d tool
 */
@@ -386,6 +401,44 @@ v3d					v3dcrossv3f(const v3d a, const v3f b);
 v3d					*pv3dcrossv3d(v3d *v, const v3d b);
 v3d					*pv3dcrossv3f(v3d *v, const v3f b);
 
+v3d					inv3d(v3d a);
+v3d					*invp3d(v3d *a);
+
+/*
+** v4i tool
+*/
+
+v4i					v4iaddv4i(v4i a, v4i b);
+v4i					v4iaddv4f(v4i a, v4f b);
+v4i					v4iaddv4d(v4i a, v4d b);
+v4i					*pv4iaddv4i(v4i *a, const v4i b);
+v4i					*pv4iaddv4f(v4i *a, const v4f b);
+v4i					*pv4iaddv4d(v4i *a, const v4d b);
+
+v4i					v4isubv4i(v4i a, v4i b);
+v4i					v4isubv4f(v4i a, v4f b);
+v4i					v4isubv4d(v4i a, v4d b);
+v4i					*pv4isubv4i(v4i *a, const v4i b);
+v4i					*pv4isubv4f(v4i *a, const v4f b);
+v4i					*pv4isubv4d(v4i *a, const v4d b);
+
+v4i					v4imulv4i(v4i a, v4i b);
+v4i					v4imulv4f(v4i a, v4f b);
+v4i					v4imulv4d(v4i a, v4d b);
+v4i					*pv4imulv4i(v4i *a, const v4i b);
+v4i					*pv4imulv4f(v4i *a, const v4f b);
+v4i					*pv4imulv4d(v4i *a, const v4d b);
+
+v4i					v4idivv4i(v4i a, v4i b);
+v4i					v4idivv4f(v4i a, v4f b);
+v4i					v4idivv4d(v4i a, v4d b);
+v4i					*pv4idivv4i(v4i *a, const v4i b);
+v4i					*pv4idivv4f(v4i *a, const v4f b);
+v4i					*pv4idivv4d(v4i *a, const v4d b);
+
+v4i					inv4i(v4i a);
+v4i					*invp4i(v4i *a);
+
 /*
 ** v4f tool
 */
@@ -429,6 +482,56 @@ v4f					v4fcrossv4f(const v4f a, const v4f b);
 v4f					v4fcrossv4d(const v4f a, const v4d b);
 v4f					*pv4fcrossv4f(v4f *v, const v4f b);
 v4f					*pv4fcrossv4d(v4f *v, const v4d b);
+
+v4f					inv4f(v4f a);
+v4f					*invp4f(v4f *a);
+
+/*
+** v4d tool
+*/
+
+v4d					v4daddv4i(v4d a, v4i b);
+v4d					v4daddv4f(v4d a, v4f b);
+v4d					v4daddv4d(v4d a, v4d b);
+v4d					*pv4daddv4i(v4d *a, const v4i b);
+v4d					*pv4daddv4f(v4d *a, const v4f b);
+v4d					*pv4daddv4d(v4d *a, const v4d b);
+
+v4d					v4dsubv4i(v4d a, v4i b);
+v4d					v4dsubv4f(v4d a, v4f b);
+v4d					v4dsubv4d(v4d a, v4d b);
+v4d					*pv4dsubv4i(v4d *a, const v4i b);
+v4d					*pv4dsubv4f(v4d *a, const v4f b);
+v4d					*pv4dsubv4d(v4d *a, const v4d b);
+
+v4d					v4dmulv4i(v4d a, v4i b);
+v4d					v4dmulv4f(v4d a, v4f b);
+v4d					v4dmulv4d(v4d a, v4d b);
+v4d					*pv4dmulv4i(v4d *a, const v4i b);
+v4d					*pv4dmulv4f(v4d *a, const v4f b);
+v4d					*pv4dmulv4d(v4d *a, const v4d b);
+
+v4d					v4ddivv4i(v4d a, v4i b);
+v4d					v4ddivv4f(v4d a, v4f b);
+v4d					v4ddivv4d(v4d a, v4d b);
+v4d					*pv4ddivv4i(v4d *a, const v4i b);
+v4d					*pv4ddivv4f(v4d *a, const v4f b);
+v4d					*pv4ddivv4d(v4d *a, const v4d b);
+
+v4d					*normalize4d(v4d *v);
+v4d					normalized4d(v4d v);
+v4d					normlen4d(v4d v, double *nor);
+
+double				v4ddotv4f(const v4d a, const v4f b);
+double				v4ddotv4d(const v4d a, const v4d b);
+
+v4d					v4dcrossv4f(const v4d a, const v4f b);
+v4d					v4dcrossv4d(const v4d a, const v4d b);
+v4d					*pv4dcrossv4f(v4d *v, const v4f b);
+v4d					*pv4dcrossv4d(v4d *v, const v4d b);
+
+v4d					inv4d(v4d a);
+v4d					*invp4d(v4d *a);
 
 /*
 ** UV tools

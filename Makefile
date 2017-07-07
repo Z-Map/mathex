@@ -6,7 +6,7 @@
 #    By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/03 18:39:00 by qloubier          #+#    #+#              #
-#    Updated: 2017/07/04 01:53:50 by qloubier         ###   ########.fr        #
+#    Updated: 2017/07/06 16:42:46 by qloubier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -170,6 +170,19 @@ SRCS=utils/utils.c\
 	vector/vec3f/tov3f.c\
 	vector/vec3d/tov3d.c\
 	vector/vec3i/tov3i.c\
+	vector/vec4i/add4f.c\
+	vector/vec4i/add4d.c\
+	vector/vec4i/add4i.c\
+	vector/vec4i/div4f.c\
+	vector/vec4i/div4d.c\
+	vector/vec4i/div4i.c\
+	vector/vec4i/mul4f.c\
+	vector/vec4i/mul4d.c\
+	vector/vec4i/mul4i.c\
+	vector/vec4i/sub4f.c\
+	vector/vec4i/sub4d.c\
+	vector/vec4i/sub4i.c\
+	vector/vec4i/tov4i.c\
 	vector/vec4f/add4f.c\
 	vector/vec4f/add4d.c\
 	vector/vec4f/add4i.c\
@@ -184,6 +197,22 @@ SRCS=utils/utils.c\
 	vector/vec4f/sub4i.c\
 	vector/vec4f/normalize.c\
 	vector/vec4f/dot.c\
+	vector/vec4f/tov4f.c\
+	vector/vec4d/add4f.c\
+	vector/vec4d/add4d.c\
+	vector/vec4d/add4i.c\
+	vector/vec4d/div4f.c\
+	vector/vec4d/div4d.c\
+	vector/vec4d/div4i.c\
+	vector/vec4d/mul4f.c\
+	vector/vec4d/mul4d.c\
+	vector/vec4d/mul4i.c\
+	vector/vec4d/sub4f.c\
+	vector/vec4d/sub4d.c\
+	vector/vec4d/sub4i.c\
+	vector/vec4d/normalize.c\
+	vector/vec4d/dot.c\
+	vector/vec4d/tov4d.c\
 	quaternion/quat_identity.c\
 	quaternion/quat_mult.c\
 	quaternion/quat_inv.c\

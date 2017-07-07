@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tov4f.c                                            :+:      :+:    :+:   */
+/*   div4i.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/21 01:29:16 by qloubier          #+#    #+#             */
-/*   Updated: 2017/07/06 16:42:57 by qloubier         ###   ########.fr       */
+/*   Created: 2016/03/16 01:12:31 by qloubier          #+#    #+#             */
+/*   Updated: 2017/06/09 09:36:35 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/vector.h"
 
-v4f					nv4f(float i)
+v4i					v4idivv4i(v4i a, v4i b)
 {
-	return ((v4f){i, i, i, i});
+	return ((v4i){ a.x / (int)b.x, a.y / (int)b.y, a.z / (int)b.z,
+		a.w / (int)b.w});
 }
 
-v4f					v2to4f(v2f vec)
+v4i					*pv4idivv4i(v4i *a, const v4i b)
 {
-	return ((v4f){vec.x, vec.y, 0.0f, 0.0f});
-}
-
-v4f					v3to4f(v3f vec)
-{
-	return ((v4f){vec.x, vec.y, vec.z, 0.0f});
+	a->x /= (int)b.x;
+	a->y /= (int)b.y;
+	a->z /= (int)b.z;
+	a->w /= (int)b.w;
+	return (a);
 }

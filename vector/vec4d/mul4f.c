@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tov4f.c                                            :+:      :+:    :+:   */
+/*   mul4f.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/21 01:29:16 by qloubier          #+#    #+#             */
-/*   Updated: 2017/07/06 16:42:57 by qloubier         ###   ########.fr       */
+/*   Created: 2016/03/16 01:06:47 by qloubier          #+#    #+#             */
+/*   Updated: 2017/07/06 16:46:52 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/vector.h"
 
-v4f					nv4f(float i)
+v4d					v4dmulv4f(v4d a, v4f b)
 {
-	return ((v4f){i, i, i, i});
+	return ((v4d){ a.x * (double)(b.x),
+		a.y * (double)b.y,
+		a.z * (double)b.z,
+		a.w * (double)b.w});
 }
 
-v4f					v2to4f(v2f vec)
+v4d					*pv4dmulv4f(v4d *a, const v4f b)
 {
-	return ((v4f){vec.x, vec.y, 0.0f, 0.0f});
-}
-
-v4f					v3to4f(v3f vec)
-{
-	return ((v4f){vec.x, vec.y, vec.z, 0.0f});
+	a->x *= (double)b.x;
+	a->y *= (double)b.y;
+	a->z *= (double)b.z;
+	a->w *= (double)b.w;
+	return (a);
 }

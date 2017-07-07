@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tov4f.c                                            :+:      :+:    :+:   */
+/*   tov4d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/21 01:29:16 by qloubier          #+#    #+#             */
-/*   Updated: 2017/07/06 16:42:57 by qloubier         ###   ########.fr       */
+/*   Updated: 2017/07/07 09:23:38 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/vector.h"
 
-v4f					nv4f(float i)
+v4d					nv4d(double i)
 {
-	return ((v4f){i, i, i, i});
+	return ((v4d){i, i, i, i});
 }
 
-v4f					v2to4f(v2f vec)
+v4d					v2to4d(v2d vec)
 {
-	return ((v4f){vec.x, vec.y, 0.0f, 0.0f});
+	return ((v4d){vec.x, vec.y, 0.0, 0.0});
 }
 
-v4f					v3to4f(v3f vec)
+v4d					v3to4d(v3d vec)
 {
-	return ((v4f){vec.x, vec.y, vec.z, 0.0f});
+	return ((v4d){vec.x, vec.y, vec.z, 0.0});
 }
