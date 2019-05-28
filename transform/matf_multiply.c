@@ -6,20 +6,20 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 11:54:05 by qloubier          #+#    #+#             */
-/*   Updated: 2016/11/26 17:17:46 by qloubier         ###   ########.fr       */
+/*   Updated: 2019/05/28 17:47:22 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/matrix.h"
 
-static inline void	pmattf_vecprod(v3f *v, const mattf *mat)
+static inline void	pmattf_vecprod(t_v3f *v, const t_mattf *mat)
 {
-	*v = (v3f){(mat->x.x * v->x) + (mat->y.x * v->y) + (mat->z.x * v->z),
+	*v = (t_v3f){(mat->x.x * v->x) + (mat->y.x * v->y) + (mat->z.x * v->z),
 		(mat->x.y * v->x) + (mat->y.y * v->y) + (mat->z.y * v->z),
 		(mat->x.z * v->x) + (mat->y.z * v->y) + (mat->z.z * v->z)};
 }
 
-mattf				*pmattf_multiply(mattf *dest, const mattf *mat)
+t_mattf				*pmattf_multiply(t_mattf *dest, const t_mattf *mat)
 {
 	pmattf_apply(&(dest->offset), mat);
 	pmattf_vecprod(&(dest->x), mat);
@@ -28,13 +28,13 @@ mattf				*pmattf_multiply(mattf *dest, const mattf *mat)
 	return (dest);
 }
 
-mattf				mattf_multiply(mattf mat1, mattf mat2)
+t_mattf				mattf_multiply(t_mattf mat1, t_mattf mat2)
 {
 	pmattf_multiply(&mat1, &mat2);
 	return (mat1);
 }
 
-v3f				*pmattf_apply(v3f *v, const mattf *mat)
+t_v3f				*pmattf_apply(t_v3f *v, const t_mattf *mat)
 {
 	pmattf_vecprod(v, mat);
 	v->x += mat->offset.x;
@@ -43,9 +43,9 @@ v3f				*pmattf_apply(v3f *v, const mattf *mat)
 	return (v);
 }
 
-v3f				mattf_apply(v3f v, mattf mat)
+t_v3f				mattf_apply(t_v3f v, t_mattf mat)
 {
-	return ((v3f){
+	return ((t_v3f){
 		(mat.x.x * v.x) + (mat.y.x * v.y) + (mat.z.x * v.z) + mat.offset.x,
 		(mat.x.y * v.x) + (mat.y.y * v.y) + (mat.z.y * v.z) + mat.offset.y,
 		(mat.x.z * v.x) + (mat.y.z * v.y) + (mat.z.z * v.z) + mat.offset.z});

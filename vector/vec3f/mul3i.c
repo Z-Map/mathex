@@ -6,20 +6,20 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 01:06:47 by qloubier          #+#    #+#             */
-/*   Updated: 2017/05/25 00:58:41 by qloubier         ###   ########.fr       */
+/*   Updated: 2019/05/28 17:53:55 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/vector.h"
 
-v3f					v3fmulv3i(v3f a, v3i b)
+t_v3f					v3fmulv3i(t_v3f a, t_v3i b)
 {
-	return ((v3f){ a.x * (float)(b.x),
+	return ((t_v3f){ a.x * (float)(b.x),
 		a.y * (float)(b.y),
 		a.z * (float)(b.z)});
 }
 
-v3f					*pv3fmulv3i(v3f *a, const v3i b)
+t_v3f					*pv3fmulv3i(t_v3f *a, const t_v3i b)
 {
 	a->x *= (float)(b.x);
 	a->y *= (float)(b.y);

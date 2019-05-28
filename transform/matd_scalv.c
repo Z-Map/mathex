@@ -6,13 +6,13 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 13:06:20 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/02 20:53:33 by qloubier         ###   ########.fr       */
+/*   Updated: 2019/05/28 17:48:19 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/matrix.h"
 
-mattd				*pmattd_scalv(mattd *mat, v3d sizev)
+t_mattd				*pmattd_scalv(t_mattd *mat, t_v3d sizev)
 {
 	pv3dmulv3d(&(mat->x), sizev);
 	pv3dmulv3d(&(mat->y), sizev);
@@ -20,7 +20,7 @@ mattd				*pmattd_scalv(mattd *mat, v3d sizev)
 	return (mat);
 }
 
-mattd				mattd_scalv(mattd mat, v3d sizev)
+t_mattd				mattd_scalv(t_mattd mat, t_v3d sizev)
 {
 	pv3dmulv3d(&(mat.x), sizev);
 	pv3dmulv3d(&(mat.y), sizev);
@@ -28,12 +28,12 @@ mattd				mattd_scalv(mattd mat, v3d sizev)
 	return (mat);
 }
 
-mattd				nmattd_scalv(v3d sizev)
+t_mattd				nmattd_scalv(t_v3d sizev)
 {
-	return ((mattd){
-		(v3d){ sizev.x, 0.0, 0.0},
-		(v3d){ 0.0, sizev.y, 0.0},
-		(v3d){ 0.0, 0.0, sizev.z},
-		(v3d){ 0.0, 0.0, 0.0},
-		(v4d){ 0.0, 0.0, 0.0, 1.0}});
+	return ((t_mattd){
+		(t_v3d){ sizev.x, 0.0, 0.0},
+		(t_v3d){ 0.0, sizev.y, 0.0},
+		(t_v3d){ 0.0, 0.0, sizev.z},
+		(t_v3d){ 0.0, 0.0, 0.0},
+		(t_v4d){ 0.0, 0.0, 0.0, 1.0}});
 }

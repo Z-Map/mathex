@@ -6,40 +6,40 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/09 08:13:14 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/19 11:34:29 by qloubier         ###   ########.fr       */
+/*   Updated: 2019/05/28 16:47:43 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/color.h"
 
-v4f				rgbatov4f(t_rgba col)
+t_v4f				rgbatov4f(t_rgba col)
 {
-	return ((v4f){
+	return ((t_v4f){
 		(float)col.r / 255.0f,
 		(float)col.g / 255.0f,
 		(float)col.b / 255.0f,
 		(float)col.a / 255.0f});
 }
 
-v3f				rgbatov3f(t_rgba col)
+t_v3f				rgbatov3f(t_rgba col)
 {
-	return ((v3f){
+	return ((t_v3f){
 		(float)col.r / 255.0f,
 		(float)col.g / 255.0f,
 		(float)col.b / 255.0f});
 }
 
-v3f				rgbtov3f(t_rgb col)
+t_v3f				rgbtov3f(t_rgb col)
 {
-	return ((v3f){
+	return ((t_v3f){
 		(float)col.r / 255.0f,
 		(float)col.g / 255.0f,
 		(float)col.b / 255.0f});
 }
 
-v4f				rgbtov4f(t_rgb col)
+t_v4f				rgbtov4f(t_rgb col)
 {
-	return ((v4f){
+	return ((t_v4f){
 		(float)col.r / 255.0f,
 		(float)col.g / 255.0f,
 		(float)col.b / 255.0f, 1.0f});

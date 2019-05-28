@@ -6,7 +6,7 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/29 09:54:44 by qloubier          #+#    #+#             */
-/*   Updated: 2017/05/23 22:08:11 by qloubier         ###   ########.fr       */
+/*   Updated: 2019/05/28 17:17:15 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ float		mxminposf(float a, float b)
 {
 	if ((a < b) && (a > 0.0f))
 		return (a);
-	return ((b < 0.0f) ? 0.0f: b);
+	return ((b < 0.0f) ? 0.0f : b);
 }

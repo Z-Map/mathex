@@ -6,14 +6,14 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/09 08:13:14 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/29 16:56:26 by qloubier         ###   ########.fr       */
+/*   Updated: 2019/05/28 17:53:55 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/utils.h"
 #include "mathex/color.h"
 
-unsigned int		v4ftoui(v4f vcol)
+unsigned int		v4ftoui(t_v4f vcol)
 {
 	unsigned int	col;
 
@@ -24,7 +24,7 @@ unsigned int		v4ftoui(v4f vcol)
 	return (col);
 }
 
-unsigned int		v3ftoui(v3f vcol)
+unsigned int		v3ftoui(t_v3f vcol)
 {
 	unsigned int	col;
 

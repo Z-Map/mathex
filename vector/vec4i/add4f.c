@@ -6,21 +6,21 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 01:06:47 by qloubier          #+#    #+#             */
-/*   Updated: 2017/07/06 16:44:24 by qloubier         ###   ########.fr       */
+/*   Updated: 2019/05/28 17:53:55 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/vector.h"
 
-v4i					v4iaddv4f(v4i a, v4f b)
+t_v4i					v4iaddv4f(t_v4i a, t_v4f b)
 {
-	return ((v4i){a.x + (int)b.x,
+	return ((t_v4i){a.x + (int)b.x,
 		a.y + (int)b.y,
 		a.z + (int)b.z,
 		a.w + (int)b.w});
 }
 
-v4i					*pv4iaddv4f(v4i *a, const v4f b)
+t_v4i					*pv4iaddv4f(t_v4i *a, const t_v4f b)
 {
 	a->x += (int)b.x;
 	a->y += (int)b.y;

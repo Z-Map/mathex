@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   swapf.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 22:18:09 by qloubier          #+#    #+#             */
-/*   Updated: 2016/03/21 22:20:51 by qloubier         ###   ########.fr       */
+/*   Updated: 2019/05/28 16:47:43 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/vector.h"
 
-void			swapv2f(v2f *a, v2f *b)
+void			swapv2f(t_v2f *a, t_v2f *b)
 {
-	v2f	tmp;
+	t_v2f	tmp;
 
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
 }
 
-void			swapv3f(v3f *a, v3f *b)
+void			swapv3f(t_v3f *a, t_v3f *b)
 {
-	v3f	tmp;
+	t_v3f	tmp;
 
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
 }
 
-void			swapv4f(v4f *a, v4f *b)
+void			swapv4f(t_v4f *a, t_v4f *b)
 {
-	v4f	tmp;
+	t_v4f	tmp;
 
 	tmp = *a;
 	*a = *b;

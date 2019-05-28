@@ -6,18 +6,18 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 01:12:31 by qloubier          #+#    #+#             */
-/*   Updated: 2017/05/25 01:19:50 by qloubier         ###   ########.fr       */
+/*   Updated: 2019/05/28 17:53:55 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/vector.h"
 
-v3i					v3idivv3d(v3i a, v3d b)
+t_v3i					v3idivv3d(t_v3i a, t_v3d b)
 {
-	return ((v3i){ a.x / (int)(b.x), a.y / (int)(b.y), a.z / (int)(b.z)});
+	return ((t_v3i){ a.x / (int)(b.x), a.y / (int)(b.y), a.z / (int)(b.z)});
 }
 
-v3i					*pv3idivv3d(v3i *a, const v3d b)
+t_v3i					*pv3idivv3d(t_v3i *a, const t_v3d b)
 {
 	a->x /= (int)(b.x);
 	a->y /= (int)(b.y);

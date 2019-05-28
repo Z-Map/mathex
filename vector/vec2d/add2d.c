@@ -6,18 +6,18 @@
 /*   By: qloubier <qloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 01:06:47 by qloubier          #+#    #+#             */
-/*   Updated: 2017/06/02 20:48:33 by qloubier         ###   ########.fr       */
+/*   Updated: 2019/05/28 17:53:55 by qloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mathex/vector.h"
 
-v2d					v2daddv2d(v2d a, v2d b)
+t_v2d					v2daddv2d(t_v2d a, t_v2d b)
 {
-	return ((v2d){ a.x + (double)b.x, a.y + (double)b.y });
+	return ((t_v2d){ a.x + (double)b.x, a.y + (double)b.y });
 }
 
-v2d					*pv2daddv2d(v2d *a, const v2d b)
+t_v2d					*pv2daddv2d(t_v2d *a, const t_v2d b)
 {
 	a->x += (double)b.x;
 	a->y += (double)b.y;
